@@ -20,7 +20,7 @@ hostname=$(hostname -f)
 # Retrieveces hardware specification variables
 memory_free=$(vmstat --unit M | tail -1 | awk -v col="4" '{print $col}' | xargs)
 cpu_idle=$(vmstat | awk 'NR==3 {print $15}' | xargs)
-cpu_kernel=$(top -bn1 | awk '/Cpu/ {print $6}' | xargs)
+cpu_kernel=$(vmstat | awk 'NR==3 {print $14}' | xargs)
 disk_io=$(vmstat --unit M -d | tail -1 | awk -v col="10" '{print $col}' | xargs)
 disk_available=$(df -BM / | awk '/\// {print $4}' | sed 's/M//' | xargs)
 
