@@ -89,6 +89,7 @@ The host agent database contains two tables: host_info and host_usage. Below is 
 The bash scripts were tested on a single virtual machine on Google Cloud Platform (GCP). Bash scripts were tested using the bash -x command to ensure all passed values were correct and all lines were properly executed. SQL queries and SQL files were tested manually through execution and then checking the database to ensure the commands executed correctly. Sample data as well as real-time data was used to test database functions.
 
 ## Deployments
+This project can be deployed to a Linux cluster by first installing the required scripts (ddl.sql, host_info.sh, host_usage.sh, and psql_docker.sh) on each machine. Once the machine has been set up properly and has all the required files, we need to deploy our project using a docker. By creating a PostgreSQL container we would be able to run SQL commands and connect each machine to the database. Once we have established a connection with the database, we need to run the host_info.sh once to create a record of the machine's hardware specifications and deploy host_usage.sh to the machine's crontab file to execute the command at an interval.
 
 ## Improvements
 Here are a few things I would like to improve on in the future:
