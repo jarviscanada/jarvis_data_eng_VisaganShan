@@ -4,61 +4,66 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git
+**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, Python, HTML & CSS, Javascript, Front-end Frameworks (React), Back-end Frameworks (Express.js, Node.js), Cloud Platforms (AWS,GCP)
 
-**Competent:** Donec, fermentum, Donec, fermentum, Donec
+**Competent:** C++, Typescript, C, Filler, Filler
 
-**Familiar:** Donec, fermentum, fermentum, fermentum, fermentum
+**Familiar:** Lua, Visual Basic, PHP, Filler, Filler
 
 ## Jarvis Projects
 
-Project source code: [https://github.com/jarviscanada/jarvis_data_eng_demo](https://github.com/jarviscanada/jarvis_data_eng_demo)
+Project source code: [https://github.com/jarviscanada/jarvis_data_eng__VisaganShan/](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan/)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/linux_sql)]: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/main/linux_sql)]: Implemented a monitoring agent that can track the hardware specifications and resource usage of machines in a Linux cluster and store the data inside a database. This monitoring agent is programming using technologies such as Bash, Docker, PostgreSQL, and Git and is tested using virtual machine instances running Rocky Linux 9 on the Google Cloud Platform(GCP).
 
-**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/core_java)]:
+**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/core_java)]:
       
   - Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
   - JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
   - Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
 
-**Springboot App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/springboot)]: Not Started
+**Springboot App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/springboot)]: Not Started
 
-**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/python_data_anlytics)]: Not Started
+**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/python_data_anlytics)]: Not Started
 
-**Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/hadoop)]: Not Started
+**Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/hadoop)]: Not Started
 
-**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/spark)]: Not Started
+**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/spark)]: Not Started
 
-**Cloud/DevOps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/cloud_devops)]: Not Started
+**Cloud/DevOps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/cloud_devops)]: Not Started
 
 
 ## Highlighted Projects
-**Web app for resturant** [[GitHub](https://github.com/jarviscanada/jarvis_profile_builder)]: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**Gym Junkie - Wesbite** [[GitHub](https://github.com/VisaganS/gym_junkie_backend)]: Conceptualized, strategized, and implemented a comprehensive full-stack application that allows users to find, manage, and create workouts that cater to users needs. Gym Junkie was made using the following tech stack: React and SASS for the front end and Node/Express backend API with JWT for auth, and Knex to query a MySQL database.
 
 **Machine Learning**: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
 
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2020-present)**: Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.
+**Software Developer, Jarvis (2024-present)**: Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.
 
-**Tutor, XYZ Company (2019)**: Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.
+**Tutor, SuperProf (2023-present)**: Provided one-on-one tutoring sessions to students to help them grasp complex programming concepts, troubleshoot programming errors and debug code. Languages and frameworks worked with include : HTML, CSS, Javascript, React, Python, Django, Flask, C++, and C.
+
+**Sales & Communications, Wireless Wave / Glentel Inc. (2022-2023)**: Utilized excellent communication and teamwork skills to foster collaborative environments and achieve successful outcomes. Demonstrated a strong work ethic, consistently meeting project milestones and delivering results within designated timeframes.
 
 
 ## Education
-**XYZ university (2012-2016)**, Bachelor of Applied Sciences, Electrical and Computer Engineering
-- Scholarship
-- Dean's List (2015, 2016): Ut enim ad minim veniam
-- GPA: 3.8/4.0
+**Seneca Polytechnic College (2019 - 2023)**, Diploma in Computer Programming, N/A
+- Graduated with honours (2023)
+- GPA: 3.7/4.0
 
-**XYZ university (2016-2018)**, Master of Engineering, Electrical and Computer Engineering
+**Brainstation (2023)**, Software Development Diploma, N/A
+- Graduated with distinction, achieving a cumulative grade of 92 percent.
 
 
 ## Miscellaneous
-- Udacity Machine Learning (2019)
-- Winner
-- Basketball player
-- Competitive gaming
-- Volunteer, ABC Food bank: Ut enim ad minim veniam
+- Intro to Cloud Computing (2024)
+- Developing Front-End Apps With React (IBM, 2024)
+- Developing Back-End Apps with Node.js Express (IBM, 2024)
+- Developing AI Applications with Python and FLask (IBM, 2024)
+- Python for Data Science, AI, and Development (IBM, 2024)
+- Fitness / Weight Lifting
+- Car Repair and Modifications
+- Self-Improvement
