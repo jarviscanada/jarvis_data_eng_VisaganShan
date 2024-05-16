@@ -33,6 +33,8 @@ crontab -e
 4. The final step of implementation involved executing host_usage.sh on an interval of one minute to store the most recent hardware usage information. To accomplish this task, I used crontab to set up predefined intervals for the execution of this script, which ultimately allows users to receive constant updates on their hardware resource usage.
 
 ### Architecture
+![Linux_Cluster_Monitoring_Diagram](./assets/Linux_Cluster_Monitoring_Diagram.jpg)
+
 This diagram describes how a monitoring system operates in a cluster. Every node executes the bash script stored on their system and the data from the bash script is sent to the database. One node, in addition to executing the bash script, houses the psql instance to store the records. In order for data to be sent and stored in the psql instance, script execution outputs from nodes that don't house the psql instance must travel through a switch.
 
 ### Scripts
