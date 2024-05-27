@@ -1,5 +1,5 @@
 # Introduction
-This is a series of SQL code I created designed to create and perform operations on a database that consist of three entities: A members table, facilities, and bookings. These entities were created to sharpen SQL practical knowledge and understanding of the concepts behind it, learned through the execution of operations and data manipulation techniques. By developing and executing these operations, I've developed a greater affinity towards SQL database manipulation and built upon previously learned RDBMS skills.
+This is a series of SQL codes I wrote with the intentions of creating and performing operations on a database that consists of three entities: A members table, facilities, and bookings. These entities were created to sharpen SQL practical knowledge and understanding of the concepts behind it, learned through the execution of operations and data manipulation techniques performed on a PostgreSQL instance created by docker. By developing and executing these operations, I've developed a greater affinity towards SQL database manipulation and built upon previously learned RDBMS skills.
 
 # SQL Queries
 
