@@ -1,0 +1,134 @@
+# Preferred name (Characters only)
+name: "Visa Shan"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng__VisaganShan/
+
+# Introduce yourself, your academic and professional background.
+# What excites you about the software industry and your passion. At least 80 words
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac malesuada. Vivamus ligula elit, viverra eu ante porttitor, blandit convallis augue. Aliquam justo justo, mollis at lacus eu, rutrum finibus est. Vestibulum venenatis purus id accumsan pretium. In efficitur magna nec enim laoreet tincidunt. Ut libero metus, scelerisque nec eros vitae, sagittis pellentesque enim. Donec dictum felis volutpat, vehicula magna eu, imperdiet elit. Phasellus ut velit a massa efficitur faucibus. Sed volutpat, lacus sed sagittis luctus, elit.
+
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+  # At least 5 skills
+  proficient:
+    - Java
+    - Linux/Bash
+    - RDBMS/SQL
+    - Agile/Scrum
+    - Git
+    - Python
+    - HTML & CSS
+    - Javascript
+    - Front-end Frameworks (React)
+    - Back-end Frameworks (Express.js, Node.js)
+    - Cloud Platforms (AWS,GCP)
+  # At least 5 skills
+  competent:
+    - C++
+    - Typescript
+    - C
+    - Filler
+    - Filler
+  # At least 5 skills
+  familiar:
+    - Lua
+    - Visual Basic
+    - PHP
+    - Filler
+    - Filler
+
+# List of Jarvis projects
+jarvis_projects:
+  - name: "Cluster Monitor"
+    git_url: "https://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/main/linux_sql"
+    # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Implemented a monitoring agent that can track the hardware specifications and resource usage of machines in a Linux cluster and store the data inside a database. This monitoring agent is programming using technologies such as Bash, Docker, PostgreSQL, and Git and is tested using virtual machine instances running Rocky Linux 9 on the Google Cloud Platform(GCP)."
+  - name: "Core Java Apps"
+    git_url: "/core_java"
+    description:
+      - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      - "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+  - name: "Springboot App"
+    git_url: "/springboot"
+    description: ""
+  - name: "Python Data Analytics"
+    git_url: "/python_data_anlytics"
+    description: ""
+  - name: "Hadoop"
+    git_url: "/hadoop"
+    description: ""
+  - name: "Spark"
+    git_url: "/spark"
+    description: ""
+  - name: "Cloud/DevOps"
+    git_url: "/cloud_devops"
+    description: ""
+
+# List of personal or academic projects
+# Feel free to add more projects
+highlighted_projects:
+    #project name
+  - name: "Gym Junkie - Wesbite"
+    #URL is optional
+    git_url: "https://github.com/VisaganS/gym_junkie_backend"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Conceptualized, strategized, and implemented a comprehensive full-stack application that allows users to find, manage, and create workouts that cater to users needs. Gym Junkie was made using the following tech stack: React and SASS for the front end and Node/Express backend API with JWT for auth, and Knex to query a MySQL database."
+  - name: "Machine Learning"
+    git_url:
+    description: "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem."
+
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
+professional_experience:
+  #Write your Jarvis role as a professional experience rather than training.
+  - title: "Software Developer"
+    company: "Jarvis"
+    duration: "2024-present"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
+  - title: "Tutor"
+    company: "SuperProf"
+    duration: "2023-present"
+    description: "Provided one-on-one tutoring sessions to students to help them grasp complex programming concepts, troubleshoot programming errors and debug code. Languages and frameworks worked with include : HTML, CSS, Javascript, React, Python, Django, Flask, C++, and C."
+  - title: "Sales & Communications"
+    company: "Wireless Wave / Glentel Inc."
+    duration: "2022-2023"
+    description: "Utilized excellent communication and teamwork skills to foster collaborative environments and achieve successful outcomes. Demonstrated a strong work ethic, consistently meeting project milestones and delivering results within designated timeframes."
+
+#List of edcuation
+education: 
+  - school_name: "Seneca Polytechnic College"
+    duration: "2019 - 2023"
+    degree: "Diploma in Computer Programming"
+    department: "N/A"
+    # optional
+    awards_achievements: 
+      - "Graduated with honours (2023)"
+      - "GPA: 3.7/4.0"
+  - school_name: "Brainstation"
+    duration: "2023"
+    degree: "Software Development Diploma"
+    department: "N/A"
+    awards_achievements:
+      - "Graduated with distinction, achieving a cumulative grade of 92 percent." 
+
+#Optional section
+others:
+    #category
+  - title: "Certificates"
+    #list of items
+    bullets:
+      - "Intro to Cloud Computing (2024)"
+      - "Developing Front-End Apps With React (IBM, 2024)"
+      - "Developing Back-End Apps with Node.js Express (IBM, 2024)"
+      - "Developing AI Applications with Python and FLask (IBM, 2024)"
+      - "Python for Data Science, AI, and Development (IBM, 2024)"
+  - title: "Activities/Hobbies"
+    bullets:
+      - "Fitness / Weight Lifting"
+      - "Car Repair and Modifications"
+      - "Self-Improvement"
