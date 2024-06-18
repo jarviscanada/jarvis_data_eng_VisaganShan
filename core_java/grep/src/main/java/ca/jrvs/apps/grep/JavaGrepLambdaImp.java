@@ -15,7 +15,8 @@ import java.util.stream.Stream;
 public class JavaGrepLambdaImp extends JavaGrepImp{
     public static void main(String[] args) {
         if (args.length != 3) {
-
+            throw new IllegalArgumentException("USAGE: JavaGrep regex rootPath outFile");
+        }
             //creating JavaGrepLambdaImp instead of JavaGrepImp
             JavaGrepLambdaImp lambdaImp = new JavaGrepLambdaImp();
             lambdaImp.setRegex(args[0]);
@@ -27,7 +28,7 @@ public class JavaGrepLambdaImp extends JavaGrepImp{
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-        }
+
     }
 
     @Override
