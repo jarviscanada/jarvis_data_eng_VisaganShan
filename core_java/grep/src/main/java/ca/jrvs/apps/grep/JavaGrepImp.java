@@ -42,7 +42,6 @@ public class JavaGrepImp implements JavaGrep {
     @Override
     public void process() throws IOException {
         List<String> matchedLines = new ArrayList<>();
-
         List<File> files = listFiles(getRootPath());
         for (File file : files) {
             List<String> lines = readLines(file);
@@ -78,12 +77,25 @@ public class JavaGrepImp implements JavaGrep {
 
     @Override
     public List<String> readLines(File inputFile) throws IllegalArgumentException{
-        try{
-            Stream<String> lines = Files.lines(inputFile.toPath());
-            return lines.collect(Collectors.toList());
-        } catch (IOException ex){
-            throw new IllegalArgumentException("Unable to read file", ex);
-        }
+            try{
+                BufferedReader br = new BufferedReader(new FileReader(inputFile));
+                List<String> lines = new ArrayList<>();
+                String line;
+
+                while ((line = br.readLine()) != null){
+                    lines.add(line);
+                }
+                br.close();
+                return lines;
+            } catch (IOException ex) {
+                throw new IllegalArgumentException("Unable to read file", ex);
+            }
+//        try{
+//            Stream<String> lines = Files.lines(inputFile.toPath());
+//            return lines.collect(Collectors.toList());
+//        } catch (IOException ex){
+//            throw new IllegalArgumentException("Unable to read file", ex);
+//        }
     }
 
     @Override
