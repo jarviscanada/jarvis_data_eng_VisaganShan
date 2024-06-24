@@ -5,8 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng__VisaganSh
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac malesuada. Vivamus ligula elit, viverra eu ante porttitor, blandit convallis augue. Aliquam justo justo, mollis at lacus eu, rutrum finibus est. Vestibulum venenatis purus id accumsan pretium. In efficitur magna nec enim laoreet tincidunt. Ut libero metus, scelerisque nec eros vitae, sagittis pellentesque enim. Donec dictum felis volutpat, vehicula magna eu, imperdiet elit. Phasellus ut velit a massa efficitur faucibus. Sed volutpat, lacus sed sagittis luctus, elit.
-
+summary: 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
 skills:
@@ -22,21 +21,20 @@ skills:
     - Javascript
     - Front-end Frameworks (React)
     - Back-end Frameworks (Express.js, Node.js)
-    - Cloud Platforms (AWS,GCP)
   # At least 5 skills
   competent:
-    - C++
+    - Cloud Platforms (AWS,GCP)
     - Typescript
-    - C
-    - Filler
-    - Filler
+    - C++
+    - Docker
+    - Bash/Shell
   # At least 5 skills
   familiar:
+    - C
     - Lua
     - Visual Basic
     - PHP
-    - Filler
-    - Filler
+    - Powershell
 
 # List of Jarvis projects
 jarvis_projects:
@@ -50,7 +48,7 @@ jarvis_projects:
     description:
       - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
       - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-      - "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      - "Grep App: a command-line utility that searches for a text pattern recursively in a given directory, and outputs matched lines to a file. Implemented using Core Java and its features such as Lambda, Stream and Regex and imported IO classes. Deployed using a fat JAR file, turned into a Docker Image and containizered the application."
   - name: "Springboot App"
     git_url: "/springboot"
     description: ""
