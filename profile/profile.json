@@ -25,7 +25,7 @@
     {
       "description": "Conceptualized, strategized, and implemented a comprehensive full-stack application that allows users to find, manage, and create workouts that cater to users needs. Gym Junkie was made using the following tech stack: React and SASS for the front end and Node/Express backend API with JWT for auth, and Knex to query a MySQL database.",
       "git_url": "https://github.com/VisaganS/gym_junkie_backend",
-      "name": "Gym Junkie - Wesbite"
+      "name": "Gym Junkie - Website"
     },
     {
       "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
@@ -43,7 +43,7 @@
       "description": [
         "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
         "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
-        "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+        "Grep App: a command-line utility that searches for a text pattern recursively in a given directory, and outputs matched lines to a file. Implemented using Core Java and its features such as Lambda, Stream and Regex and imported IO classes. Deployed using a fat JAR file, turned into a Docker Image and containizered the application."
       ],
       "git_url": "/core_java",
       "name": "Core Java Apps"
@@ -81,7 +81,7 @@
         "Intro to Cloud Computing (2024)",
         "Developing Front-End Apps With React (IBM, 2024)",
         "Developing Back-End Apps with Node.js Express (IBM, 2024)",
-        "Developing AI Applications with Python and FLask (IBM, 2024)",
+        "Developing AI Applications with Python and Flask (IBM, 2024)",
         "Python for Data Science, AI, and Development (IBM, 2024)"
       ],
       "title": "Certificates"
@@ -104,7 +104,7 @@
     },
     {
       "company": "SuperProf",
-      "description": "Provided one-on-one tutoring sessions to students to help them grasp complex programming concepts, troubleshoot programming errors and debug code. Languages and frameworks worked with include : HTML, CSS, Javascript, React, Python, Django, Flask, C++, and C.",
+      "description": "Provided one-on-one tutoring sessions to students to help them grasp complex programming concepts, troubleshoot programming errors and debug code. Languages and frameworks worked with include: HTML, CSS, Javascript, React, Python, Django, Flask, C++, and C.",
       "duration": "2023-present",
       "title": "Tutor"
     },
@@ -117,18 +117,18 @@
   ],
   "skills": {
     "competent": [
-      "C++",
+      "Cloud Platforms (AWS, GCP)",
       "Typescript",
-      "C",
-      "Filler",
-      "Filler"
+      "C++",
+      "Docker",
+      "Bash/Shell"
     ],
     "familiar": [
+      "C",
       "Lua",
       "Visual Basic",
       "PHP",
-      "Filler",
-      "Filler"
+      "Powershell"
     ],
     "proficient": [
       "Java",
@@ -140,9 +140,8 @@
       "HTML \u0026 CSS",
       "Javascript",
       "Front-end Frameworks (React)",
-      "Back-end Frameworks (Express.js, Node.js)",
-      "Cloud Platforms (AWS,GCP)"
+      "Back-end Frameworks (Express.js, Node.js)"
     ]
   },
-  "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac malesuada. Vivamus ligula elit, viverra eu ante porttitor, blandit convallis augue. Aliquam justo justo, mollis at lacus eu, rutrum finibus est. Vestibulum venenatis purus id accumsan pretium. In efficitur magna nec enim laoreet tincidunt. Ut libero metus, scelerisque nec eros vitae, sagittis pellentesque enim. Donec dictum felis volutpat, vehicula magna eu, imperdiet elit. Phasellus ut velit a massa efficitur faucibus. Sed volutpat, lacus sed sagittis luctus, elit."
+  "summary": "I am a data engineer and I enjoy solving complex problems. My journey into the software industry began in high school when I decided to take a coding course and discovered that I love to be challenged mentally and apply my skills instead of learning through methods that focus on just retaining and regurgitating knowledge from books and documents. From there I pursued my passion and my education, graduating from Seneca College in 2023 in Computer Programming and a Software Development Bootcamp at Brainstation. In my spare time, I work as a freelance programming tutor, helping college and university students with their assignments."
 }
