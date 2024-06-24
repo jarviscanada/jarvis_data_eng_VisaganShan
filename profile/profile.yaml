@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng__VisaganSh
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: I am a data engineer and I enjoy solving complex problems. My journey into the software industry began in highschool, where I decided to take a coding course and discovered that I love to be challenged mentally and apply my skills instead of learning through methods that focus on just retaining and reguritating knowledge from books and documents. From there I pursued my passion and my education, graduating from Seneca College in 2023 in Computer Programming and a Software Development Bootcamp at Brainstation. In my spare time, I work as a freelance programming tutor, helping college and university students with their assignments.
+summary: I am a data engineer and I enjoy solving complex problems. My journey into the software industry began in high school when I decided to take a coding course and discovered that I love to be challenged mentally and apply my skills instead of learning through methods that focus on just retaining and regurgitating knowledge from books and documents. From there I pursued my passion and my education, graduating from Seneca College in 2023 in Computer Programming and a Software Development Bootcamp at Brainstation. In my spare time, I work as a freelance programming tutor, helping college and university students with their assignments.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -24,7 +24,7 @@ skills:
     - Back-end Frameworks (Express.js, Node.js)
   # At least 5 skills
   competent:
-    - Cloud Platforms (AWS,GCP)
+    - Cloud Platforms (AWS, GCP)
     - Typescript
     - C++
     - Docker
@@ -70,7 +70,7 @@ jarvis_projects:
 # Feel free to add more projects
 highlighted_projects:
     #project name
-  - name: "Gym Junkie - Wesbite"
+  - name: "Gym Junkie - Website"
     #URL is optional
     git_url: "https://github.com/VisaganS/gym_junkie_backend"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
@@ -92,7 +92,7 @@ professional_experience:
   - title: "Tutor"
     company: "SuperProf"
     duration: "2023-present"
-    description: "Provided one-on-one tutoring sessions to students to help them grasp complex programming concepts, troubleshoot programming errors and debug code. Languages and frameworks worked with include : HTML, CSS, Javascript, React, Python, Django, Flask, C++, and C."
+    description: "Provided one-on-one tutoring sessions to students to help them grasp complex programming concepts, troubleshoot programming errors and debug code. Languages and frameworks worked with include: HTML, CSS, Javascript, React, Python, Django, Flask, C++, and C."
   - title: "Sales & Communications"
     company: "Wireless Wave / Glentel Inc."
     duration: "2022-2023"
@@ -124,7 +124,7 @@ others:
       - "Intro to Cloud Computing (2024)"
       - "Developing Front-End Apps With React (IBM, 2024)"
       - "Developing Back-End Apps with Node.js Express (IBM, 2024)"
-      - "Developing AI Applications with Python and FLask (IBM, 2024)"
+      - "Developing AI Applications with Python and Flask (IBM, 2024)"
       - "Python for Data Science, AI, and Development (IBM, 2024)"
   - title: "Activities/Hobbies"
     bullets:
