@@ -29,6 +29,10 @@ public class QuoteDao implements CrudDao<Quote, String> {
 
   private static final String DELETE_ALL = "DELETE FROM quote";
 
+  public void setConnection(Connection c) {
+    this.c = c;
+  }
+
   @Override
   public Quote save(Quote entity) throws IllegalArgumentException {
     // if no existing object perform create else update
@@ -49,7 +53,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
 
         statement.execute();
         return this.findById(entity.getTicker())
-            .orElseThrow(() -> new RuntimeException("Failed to retrieved the created quote." ));
+            .orElseThrow(() -> new RuntimeException("Failed to retrieve the created quote." ));
 
       } catch (SQLException e) {
         e.printStackTrace();
@@ -72,7 +76,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
 
         statement.execute();
         return this.findById(entity.getTicker())
-            .orElseThrow(() -> new RuntimeException("Failed to retrieved the update quote." ));
+            .orElseThrow(() -> new RuntimeException("Failed to retrieve the update quote." ));
 
       } catch (SQLException e) {
         e.printStackTrace();

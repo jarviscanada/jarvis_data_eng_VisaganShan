@@ -49,7 +49,7 @@ public class JsonParser {
 
     // if returned Json String is not Global Quote (ex. root is an error message).
     if (globalQuoteNode.isMissingNode() || globalQuoteNode.isEmpty()){
-      throw new IllegalArgumentException("No data found");
+      throw new IllegalArgumentException("No data found within Global Quote.");
     }
 
     // Create object to pass information to

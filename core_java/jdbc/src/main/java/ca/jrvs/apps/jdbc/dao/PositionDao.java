@@ -1,9 +1,7 @@
 package ca.jrvs.apps.jdbc.dao;
 
 import ca.jrvs.apps.jdbc.dto.Position;
-import ca.jrvs.apps.jdbc.dto.Quote;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -28,6 +26,10 @@ public class PositionDao implements CrudDao<Position, String> {
 
   private static final String DELETE_ALL = "DELETE FROM position";
 
+  public void setConnection(Connection c) {
+    this.c = c;
+  }
+
   @Override
   public Position save(Position entity) throws IllegalArgumentException {
     // if no existing object perform create else update
@@ -39,7 +41,7 @@ public class PositionDao implements CrudDao<Position, String> {
         statement.setDouble(3, entity.getValuePaid());
         statement.execute();
         return this.findById(entity.getTicker())
-            .orElseThrow(() -> new RuntimeException("Failed to retrieved the created position." ));
+            .orElseThrow(() -> new RuntimeException("Failed to retrieve the created position." ));
 
       } catch (SQLException e) {
         e.printStackTrace();
@@ -54,7 +56,7 @@ public class PositionDao implements CrudDao<Position, String> {
 
         statement.execute();
         return this.findById(entity.getTicker())
-            .orElseThrow(() -> new RuntimeException("Failed to retrieved the update position." ));
+            .orElseThrow(() -> new RuntimeException("Failed to retrieve the update position." ));
 
       } catch (SQLException e) {
         e.printStackTrace();

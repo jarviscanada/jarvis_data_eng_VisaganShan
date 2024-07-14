@@ -1,5 +1,5 @@
 package ca.jrvs.apps.jdbc;
 
-public class QuoteDaoTest {
+public class QuoteDao_Test {
 
 }
