@@ -11,6 +11,20 @@ public class PositionService {
 
   private PositionDao dao;
 
+
+  //Create constructor to establish a connection to the database
+  public PositionService(){
+    DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost",
+        "stock_quote", "postgres", "password");
+    try {
+      // Establish a connection to the database
+      Connection connection = dcm.getConnection();
+      dao = new PositionDao(connection);
+    } catch(SQLException e){
+      e.printStackTrace();
+      throw new RuntimeException("Position Service unable to establish database connection.");
+    }
+  }
   /**
    * Processes a buy order and updates the database accordingly
    * @param ticker
@@ -19,10 +33,6 @@ public class PositionService {
    * @return The position in our database after processing the buy
    */
   public Position buy(String ticker, int numberOfShares, double price) {
-    // Set up connection to database
-    DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost",
-        "stock_quote", "postgres", "password");
-
     // Create position object to pass to database
     Position pos = new Position();
     pos.setTicker(ticker);
@@ -42,23 +52,12 @@ public class PositionService {
       }
     }
 
-      //Store position in database
-    try {
-      // Establish a connection to the database
-      Connection connection = dcm.getConnection();
-      dao = new PositionDao();
-      dao.setConnection(connection);
+    // Pass object to DAO save function which will create/update position in the database.
+    dao.save(pos);
 
-      // Pass object to DAO save function which will create/update position in the database.
-      dao.save(pos);
+    return dao.findById(pos.getTicker())
+        .orElseThrow(() -> new RuntimeException("Failed to retrieve the created position." ));
 
-      return dao.findById(pos.getTicker())
-          .orElseThrow(() -> new RuntimeException("Failed to retrieve the created position." ));
-
-    }catch (SQLException e){
-      e.printStackTrace();
-      throw new RuntimeException("Failed to process buying of order.");
-    }
   }
 
   /**
@@ -66,22 +65,7 @@ public class PositionService {
    * @param ticker
    */
   public void sell(String ticker) {
-    DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost",
-        "stock_quote", "postgres", "password");
-
-    try {
-      // Establish a connection to the database
-      Connection connection = dcm.getConnection();
-      PositionDao posDao = new PositionDao();
-      posDao.setConnection(connection);
-
-      // Pass id to DAO deleteById function which will delete position in the database.
-      posDao.deleteById(ticker);
-
-    }catch (SQLException e){
-      e.printStackTrace();
-      throw new RuntimeException("Failed to process selling of order.");
-    }
+    dao.deleteById(ticker);
   }
 
 }

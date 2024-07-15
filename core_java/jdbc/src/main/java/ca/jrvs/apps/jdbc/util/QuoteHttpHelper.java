@@ -13,6 +13,11 @@ public class QuoteHttpHelper {
   private String apiKey;
   private OkHttpClient client;
 
+  public QuoteHttpHelper(){
+    //Initialize state to use http methods.
+    apiKey = "NZ3IE12TDMP2ZGUP"; //remove this afterwards and set it up as an env variable
+    client = new OkHttpClient();
+  }
   /**
    * Fetch latest quote data from Alpha Vantage endpoint
    * @param symbol
@@ -20,10 +25,6 @@ public class QuoteHttpHelper {
    * @throws IllegalArgumentException - if no data was found for the given symbol
    */
   public Quote fetchQuoteInfo(String symbol) throws IllegalArgumentException {
-    //Set up OkHttpClient object to use http methods.
-    apiKey = "NZ3IE12TDMP2ZGUP"; //remove this afterwards and set it up as an env variable
-    client = new OkHttpClient();
-
     // Build an api request call
     Request request = new Request.Builder()
         .url("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=" + symbol + "&apikey=" + apiKey + "&datatype=json")
@@ -42,7 +43,7 @@ public class QuoteHttpHelper {
 
     } catch (IllegalArgumentException e) {
       e.printStackTrace();
-      throw new IllegalArgumentException("Could not fetch data from API.",e);
+      throw new IllegalArgumentException("Could not fetch data from API.");
     } catch (IOException e) {
       throw new RuntimeException(e);
     }

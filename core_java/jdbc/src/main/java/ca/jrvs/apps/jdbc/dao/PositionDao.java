@@ -26,7 +26,7 @@ public class PositionDao implements CrudDao<Position, String> {
 
   private static final String DELETE_ALL = "DELETE FROM position";
 
-  public void setConnection(Connection c) {
+  public PositionDao(Connection c) {
     this.c = c;
   }
 
@@ -45,7 +45,7 @@ public class PositionDao implements CrudDao<Position, String> {
 
       } catch (SQLException e) {
         e.printStackTrace();
-        throw new RuntimeException(e);
+        throw new RuntimeException("Failed to create position.");
       }
     } else {
       //Update
@@ -60,7 +60,7 @@ public class PositionDao implements CrudDao<Position, String> {
 
       } catch (SQLException e) {
         e.printStackTrace();
-        throw new RuntimeException(e);
+        throw new RuntimeException("Failed to update position.");
       }
 
     }
@@ -83,7 +83,7 @@ public class PositionDao implements CrudDao<Position, String> {
       }
     }catch (SQLException e){
       e.printStackTrace();
-      throw new RuntimeException(e);
+      throw new RuntimeException("Failed to find position by id.");
     }
     return Optional.of(pos);  }
 
@@ -107,7 +107,7 @@ public class PositionDao implements CrudDao<Position, String> {
       }
     }catch (SQLException e){
       e.printStackTrace();
-      throw new RuntimeException(e);
+      throw new RuntimeException("Failed to find positions.");
     }
     return posList;
   }
@@ -119,7 +119,7 @@ public class PositionDao implements CrudDao<Position, String> {
       statement.execute();
     }catch (SQLException e){
       e.printStackTrace();
-      throw new RuntimeException(e);
+      throw new RuntimeException("Failed to delete position by id.");
     }
   }
 
@@ -129,7 +129,7 @@ public class PositionDao implements CrudDao<Position, String> {
       statement.execute();
     }catch (SQLException e){
       e.printStackTrace();
-      throw new RuntimeException(e);
+      throw new RuntimeException("Failed to delete all positions.");
     }
   }
 

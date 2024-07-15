@@ -41,7 +41,7 @@ public class JsonParser {
    * @throws java.io.IOException
    */
 
-  public static Quote toObjectFromJson(String json) throws IOException {
+  public static Quote toObjectFromJson(String json) throws IOException, IllegalArgumentException {
     // Initialize mapper and jsonNode for operations
     ObjectMapper m = new ObjectMapper();
     JsonNode rootNode = m.readTree(json);
@@ -49,7 +49,7 @@ public class JsonParser {
 
     // if returned Json String is not Global Quote (ex. root is an error message).
     if (globalQuoteNode.isMissingNode() || globalQuoteNode.isEmpty()){
-      throw new IllegalArgumentException("No data found within Global Quote.");
+      throw new IllegalArgumentException("No data was given by API.");
     }
 
     // Create object to pass information to
