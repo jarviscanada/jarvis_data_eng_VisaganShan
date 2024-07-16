@@ -2,7 +2,7 @@ package ca.jrvs.apps.jdbc.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import java.sql.Timestamp;
-import java.util.Date;
+import java.sql.Date;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Quote {
@@ -17,7 +17,7 @@ public class Quote {
   private double previousClose;
   private double change;
   private String changePercent;
-  private Timestamp timestamp; //time when the info was pulled
+  private Timestamp timestamp;
 
   public String getTicker() {
     return ticker;

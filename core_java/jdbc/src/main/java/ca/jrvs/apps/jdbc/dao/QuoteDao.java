@@ -3,6 +3,7 @@ package ca.jrvs.apps.jdbc.dao;
 import ca.jrvs.apps.jdbc.dto.Quote;
 import java.sql.Connection;
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,8 +15,8 @@ public class QuoteDao implements CrudDao<Quote, String> {
   private Connection c;
 
   private static final String INSERT = "INSERT INTO quote (symbol, open, high, low, price, volume,"
-      + " latest_trading_day, previous_close, change, change_percent, timestamp)"
-      + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+      + " latest_trading_day, previous_close, change, change_percent)"
+      + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
   private static final String GET_ONE = "SELECT * FROM quote WHERE symbol=?";
 
@@ -35,8 +36,12 @@ public class QuoteDao implements CrudDao<Quote, String> {
 
   @Override
   public Quote save(Quote entity) throws IllegalArgumentException {
+    // Check if entity object state is valid
+    if(entity.getTicker() == null){
+      throw new IllegalArgumentException("Invalid symbol, Object can't be saved.");
+    }
     // if no existing object perform create else update
-    if (findById(entity.getTicker()).isEmpty()) {
+    if (!findById(entity.getTicker()).isPresent()) {
      //Create
       try(PreparedStatement statement = this.c.prepareStatement(INSERT);) {
         statement.setString(1,entity.getTicker());
@@ -45,11 +50,10 @@ public class QuoteDao implements CrudDao<Quote, String> {
         statement.setDouble(4, entity.getLow());
         statement.setDouble(5, entity.getPrice());
         statement.setInt(6, entity.getVolume());
-        statement.setDate(7, (Date) entity.getLatestTradingDay());
+        statement.setDate(7, entity.getLatestTradingDay());
         statement.setDouble(8, entity.getPreviousClose());
         statement.setDouble(9, entity.getChange());
         statement.setString(10, entity.getChangePercent());
-        statement.setTimestamp(11, entity.getTimestamp());
 
         statement.execute();
         return this.findById(entity.getTicker())
@@ -71,8 +75,9 @@ public class QuoteDao implements CrudDao<Quote, String> {
         statement.setDouble(7, entity.getPreviousClose());
         statement.setDouble(8, entity.getChange());
         statement.setString(9, entity.getChangePercent());
-        statement.setTimestamp(10, entity.getTimestamp());
+        statement.setTimestamp(10,new Timestamp(System.currentTimeMillis()));
         statement.setString(11, entity.getTicker());
+
 
         statement.execute();
         return this.findById(entity.getTicker())
@@ -96,7 +101,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
       statement.setString(1, s);
       ResultSet rs = statement.executeQuery();
       //retrieve values from result set and store in object
-      while(rs.next()){
+      if(rs.next()){
         quote.setTicker(rs.getString("symbol"));
         quote.setOpen(rs.getDouble("open"));
         quote.setHigh(rs.getDouble("high"));
@@ -108,13 +113,16 @@ public class QuoteDao implements CrudDao<Quote, String> {
         quote.setChange(rs.getDouble("change"));
         quote.setChangePercent(rs.getString("change_percent"));
         quote.setTimestamp(rs.getTimestamp("timestamp"));
+
+        return Optional.of(quote);
+      } else {
+        return Optional.empty();
       }
     }catch (SQLException e){
       e.printStackTrace();
       throw new RuntimeException("Failed to find quote by ID.");
     }
-    return Optional.of(quote);
-    }
+  }
 
     @Override
   public Iterable<Quote> findAll() {

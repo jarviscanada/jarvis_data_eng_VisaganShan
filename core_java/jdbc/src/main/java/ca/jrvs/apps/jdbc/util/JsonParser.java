@@ -12,7 +12,6 @@ import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.sql.Timestamp;
 
 public class JsonParser {
   /**
@@ -63,23 +62,27 @@ public class JsonParser {
     quote.setVolume(globalQuoteNode.get("06. volume").asInt());
     String dateStr = globalQuoteNode.get("07. latest trading day").asText();
 
-    //Parse date from string to Date object and store it in quote class
-    Date latestTradingDay;
     try {
-      latestTradingDay = DATE_FORMAT.parse(dateStr);
+      // Parse date string into java.util.Date object
+      Date formattedDate = DATE_FORMAT.parse(dateStr);
+
+      // Convert java.util.Date object to java.sql.Date object
+      java.sql.Date latestTradingDay = new java.sql.Date(formattedDate.getTime());
+
+      quote.setLatestTradingDay(latestTradingDay);
     } catch (ParseException e) {
       e.printStackTrace();
-      throw new RuntimeException(e);
+      throw new RuntimeException();
     }
-    quote.setLatestTradingDay(latestTradingDay);
 
     quote.setPreviousClose(globalQuoteNode.get("08. previous close").asDouble());
     quote.setChange(globalQuoteNode.get("09. change").asDouble());
     quote.setChangePercent(globalQuoteNode.get("10. change percent").asText());
 
-    // Parse timestamp
-    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-    quote.setTimestamp(timestamp);
+//    // Parse timestamp, not necessary as database will automatically do this.
+//    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+//    quote.setTimestamp(timestamp);
+
     // Return object
     return quote;
   }

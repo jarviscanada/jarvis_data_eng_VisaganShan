@@ -37,10 +37,9 @@ public class QuoteService {
     //Save object to database using DAO
     if (quote.getTicker() != null) {
       dao.save(quote);
+      return Optional.of(quote);
     } else {
       throw new IllegalArgumentException("Quote Service - No Quote Data found.");
     }
-    //Return object
-    return Optional.of(quote);
   }
 }
