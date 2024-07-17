@@ -23,10 +23,10 @@ public class PositionDao_Test {
   public static Connection c;
   public PositionDao positionDao;
   public QuoteDao quoteDao;
-  Quote aaplQuote;
-  Quote tslaQuote;
-  Position aaplPos;
-  Position tslaPos;
+  public Quote aaplQuote;
+  public Quote tslaQuote;
+  public Position aaplPos;
+  public Position tslaPos;
 
   @BeforeAll
   public static void setupDatabaseConnection(){

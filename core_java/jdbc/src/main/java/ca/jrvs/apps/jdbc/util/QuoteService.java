@@ -1,6 +1,5 @@
 package ca.jrvs.apps.jdbc.util;
 
-import ca.jrvs.apps.jdbc.dao.PositionDao;
 import ca.jrvs.apps.jdbc.dao.QuoteDao;
 import ca.jrvs.apps.jdbc.dto.Quote;
 import java.sql.Connection;
@@ -18,8 +17,8 @@ public class QuoteService {
         "stock_quote", "postgres", "password");
     httpHelper = new QuoteHttpHelper();
     try {
-      Connection connection = dcm.getConnection();
-      dao = new QuoteDao(connection);
+      Connection c = dcm.getConnection();
+      dao = new QuoteDao(c);
     } catch(SQLException e){
       e.printStackTrace();
       throw new RuntimeException("Quote Service unable to establish database connection.");
@@ -37,7 +36,7 @@ public class QuoteService {
     //Save object to database using DAO
     if (quote.getTicker() != null) {
       dao.save(quote);
-      return Optional.of(quote);
+      return dao.findById(quote.getTicker());
     } else {
       throw new IllegalArgumentException("Quote Service - No Quote Data found.");
     }

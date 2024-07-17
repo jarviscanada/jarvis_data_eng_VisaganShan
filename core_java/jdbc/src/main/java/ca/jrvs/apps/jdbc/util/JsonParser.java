@@ -55,6 +55,7 @@ public class JsonParser {
     Quote quote = new Quote();
 
     //Retrieve values and store to new object
+    quote.setTicker(globalQuoteNode.get("01. symbol").asText());
     quote.setOpen(globalQuoteNode.get("02. open").asDouble());
     quote.setHigh(globalQuoteNode.get("03. high").asDouble());
     quote.setLow(globalQuoteNode.get("04. low").asDouble());
