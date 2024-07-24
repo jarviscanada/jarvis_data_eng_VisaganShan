@@ -5,6 +5,7 @@ import ca.jrvs.apps.jdbc.dto.Quote;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Optional;
+import okhttp3.OkHttpClient;
 
 public class QuoteService {
 
@@ -24,8 +25,21 @@ public class QuoteService {
       throw new RuntimeException("Quote Service unable to establish database connection.");
     }
   }
+  public QuoteService(QuoteDao quoteDao, QuoteHttpHelper httpHelper){
+    // Establish a connection to the database and initialize httpHelper
+    DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost",
+        "stock_quote", "postgres", "password");
+    this.httpHelper = httpHelper;
+    try {
+      Connection c = dcm.getConnection();
+      dao = quoteDao;
+    } catch(SQLException e){
+      e.printStackTrace();
+      throw new RuntimeException("Quote Service unable to establish database connection.");
+    }
+  }
   /**
-   * Fetches latest quote data from endpoint
+   * Fetches latest quote data from endp oint
    *
    * @param ticker
    * @return Latest quote information or empty optional if ticker symbol not found

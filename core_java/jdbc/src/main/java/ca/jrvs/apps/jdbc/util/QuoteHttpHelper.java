@@ -14,9 +14,13 @@ public class QuoteHttpHelper {
   private OkHttpClient client;
 
   public QuoteHttpHelper(){
+    this.apiKey ="NZ3IE12TDMP2ZGUP"; //remove this afterwards and set it up as an env variable
+    this.client = new OkHttpClient();
+  }
+  public QuoteHttpHelper(String apikey, OkHttpClient client){
     //Initialize state to use http methods.
-    apiKey = "NZ3IE12TDMP2ZGUP"; //remove this afterwards and set it up as an env variable
-    client = new OkHttpClient();
+    this.apiKey = apikey;
+    this.client = client;
   }
   /**
    * Fetch latest quote data from Alpha Vantage endpoint

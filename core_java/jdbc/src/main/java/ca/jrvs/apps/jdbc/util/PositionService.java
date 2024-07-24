@@ -25,6 +25,18 @@ public class PositionService {
       throw new RuntimeException("Position Service unable to establish database connection.");
     }
   }
+  public PositionService(PositionDao posDao){
+    DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost",
+        "stock_quote", "postgres", "password");
+    try {
+      // Establish a connection to the database
+      Connection connection = dcm.getConnection();
+      this.dao = posDao;
+    } catch(SQLException e){
+      e.printStackTrace();
+      throw new RuntimeException("Position Service unable to establish database connection.");
+    }
+  }
   /**
    * Processes a buy order and updates the database accordingly
    * @param ticker

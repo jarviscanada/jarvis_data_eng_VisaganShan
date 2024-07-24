@@ -49,7 +49,7 @@ public class PositionService_IntTest {
 
     assertEquals(pos.getTicker(), retObj.getTicker());
     assertEquals(pos.getNumOfShares(), retObj.getNumOfShares());
-    assertEquals(pos.getValuePaid(), pos.getValuePaid());
+    assertEquals(pos.getValuePaid(), retObj.getValuePaid());
 
   }
 
