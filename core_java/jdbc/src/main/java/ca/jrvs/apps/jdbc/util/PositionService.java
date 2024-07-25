@@ -6,9 +6,11 @@ import ca.jrvs.apps.jdbc.dto.Quote;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Optional;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 public class PositionService {
 
+  private static final Logger logger = LoggerFactory.getLogger(PositionService.class);
   private PositionDao dao;
 
 
@@ -41,15 +43,13 @@ public class PositionService {
    * Processes a buy order and updates the database accordingly
    * @param ticker
    * @param numberOfShares
-   * @param price
    * @return The position in our database after processing the buy
    */
-  public Position buy(String ticker, int numberOfShares, double price) {
+  public Position buy(String ticker, int numberOfShares) {
     // Create position object to pass to database
     Position pos = new Position();
     pos.setTicker(ticker);
     pos.setNumOfShares(numberOfShares);
-    pos.setValuePaid(price);
 
     // Create quote object to retrieve maximum volume of given ticker
     QuoteService qs = new QuoteService();
@@ -58,18 +58,20 @@ public class PositionService {
     //Check if value is not null, retrieve Quote object from Optional
     if (optionalQuote.isPresent()){
       Quote quote = optionalQuote.get();
+      pos.setValuePaid(quote.getPrice());
       //Compare max volume of stock to number of shares bought.
       if(numberOfShares > quote.getVolume()){
-        throw new RuntimeException("Number of Shares being purchased exceeds max volume");
+        logger.error("Number of Shares being purchased exceeds max volume");
       }
     }
 
     // Pass object to DAO save function which will create/update position in the database.
     dao.save(pos);
-
-    return dao.findById(pos.getTicker())
-        .orElseThrow(() -> new RuntimeException("Failed to retrieve the created position." ));
-
+    if(dao.findById(pos.getTicker()).isPresent()){
+      return dao.findById(pos.getTicker()).get();
+    } else {
+      return null;
+    }
   }
 
   /**

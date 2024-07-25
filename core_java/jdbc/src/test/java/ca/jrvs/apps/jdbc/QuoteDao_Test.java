@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import ca.jrvs.apps.jdbc.dao.QuoteDao;
 import ca.jrvs.apps.jdbc.dto.Quote;
 import ca.jrvs.apps.jdbc.util.DatabaseConnectionManager;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Timestamp;
@@ -29,7 +30,7 @@ public class QuoteDao_Test {
 
 
   @BeforeAll
-  public static void setupDatabaseConnection(){
+  public static void setupDatabaseConnection() throws IOException {
     dcm = new DatabaseConnectionManager("localhost", "stock_quote", "postgres", "password");
     try {
       c = dcm.getConnection();

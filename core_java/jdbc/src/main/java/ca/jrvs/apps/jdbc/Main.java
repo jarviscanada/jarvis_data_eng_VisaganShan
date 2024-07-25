@@ -44,10 +44,12 @@ public class Main {
       QuoteHttpHelper rcon = new QuoteHttpHelper(properties.get("api-key"), client);
       QuoteService sQuote = new QuoteService(qRepo, rcon);
       PositionService sPos = new PositionService(pRepo);
-      StockQuoteController con = new StockQuoteController(sQuote, sPos);
+      StockQuoteController con = new StockQuoteController(sQuote, sPos, c);
       con.initClient();
     } catch (SQLException e) {
       e.printStackTrace();
+    } catch (IOException e) {
+      throw new RuntimeException(e);
     }
   }
 

@@ -1,4 +1,3 @@
-# Database config
 db-class:org.postgresql.Driver
 server:localhost
 database:stock_quote

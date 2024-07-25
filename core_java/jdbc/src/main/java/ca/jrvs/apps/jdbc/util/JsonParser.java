@@ -3,15 +3,15 @@ package ca.jrvs.apps.jdbc.util;
 import ca.jrvs.apps.jdbc.dto.Quote;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import java.io.IOException;
-import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class JsonParser {
   /**
@@ -21,6 +21,7 @@ public class JsonParser {
    * @throw JSONProcessingException
    */
   private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+  private static final Logger logger = LoggerFactory.getLogger(JsonParser.class);
 
   public static String toJson(Object object, boolean prettyJson, boolean includeNullValues)
       throws JsonProcessingException {
@@ -48,7 +49,8 @@ public class JsonParser {
 
     // if returned Json String is not Global Quote (ex. root is an error message).
     if (globalQuoteNode.isMissingNode() || globalQuoteNode.isEmpty()){
-      throw new IllegalArgumentException("No data was given by API.");
+      logger.error("No data was given by API.");
+      return null;
     }
 
     // Create object to pass information to
@@ -73,16 +75,12 @@ public class JsonParser {
       quote.setLatestTradingDay(latestTradingDay);
     } catch (ParseException e) {
       e.printStackTrace();
-      throw new RuntimeException();
+      throw new RuntimeException("Unable to parse JSON string to object.");
     }
 
     quote.setPreviousClose(globalQuoteNode.get("08. previous close").asDouble());
     quote.setChange(globalQuoteNode.get("09. change").asDouble());
     quote.setChangePercent(globalQuoteNode.get("10. change percent").asText());
-
-//    // Parse timestamp, not necessary as database will automatically do this.
-//    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-//    quote.setTimestamp(timestamp);
 
     // Return object
     return quote;

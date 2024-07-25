@@ -39,24 +39,24 @@ public class PositionService_IntTest {
     pos = new Position();
     pos.setTicker("AAPL");
     pos.setNumOfShares(2);
-    pos.setValuePaid(30);
+    pos.setValuePaid(0);
   }
 
   @Test
   public void testBuy(){
 
-    Position retObj = service.buy(pos.getTicker(), pos.getNumOfShares(), pos.getValuePaid());
+    Position retObj = service.buy(pos.getTicker(), pos.getNumOfShares());
 
     assertEquals(pos.getTicker(), retObj.getTicker());
     assertEquals(pos.getNumOfShares(), retObj.getNumOfShares());
-    assertEquals(pos.getValuePaid(), retObj.getValuePaid());
+    assertNotEquals(pos.getValuePaid(), retObj.getValuePaid());
 
   }
 
   @Test
   public void testSell(){
     // Ensure that there is a record in the database to sell
-    Position retObj = service.buy(pos.getTicker(), pos.getNumOfShares(), pos.getValuePaid());
+    Position retObj = service.buy(pos.getTicker(), pos.getNumOfShares());
     //Sell position
     service.sell(pos.getTicker());
     //Check if record remains in database

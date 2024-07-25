@@ -5,10 +5,12 @@ import ca.jrvs.apps.jdbc.dto.Quote;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Optional;
-import okhttp3.OkHttpClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class QuoteService {
 
+  private static final Logger logger = LoggerFactory.getLogger(QuoteService.class);
   private final QuoteDao dao;
   private final QuoteHttpHelper httpHelper;
 
@@ -25,6 +27,7 @@ public class QuoteService {
       throw new RuntimeException("Quote Service unable to establish database connection.");
     }
   }
+
   public QuoteService(QuoteDao quoteDao, QuoteHttpHelper httpHelper){
     // Establish a connection to the database and initialize httpHelper
     DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost",
@@ -39,7 +42,7 @@ public class QuoteService {
     }
   }
   /**
-   * Fetches latest quote data from endp oint
+   * Fetches latest quote data from endpoint
    *
    * @param ticker
    * @return Latest quote information or empty optional if ticker symbol not found
@@ -48,11 +51,12 @@ public class QuoteService {
     // Create a quote object using data retrieved from API
     Quote quote = httpHelper.fetchQuoteInfo(ticker);
     //Save object to database using DAO
-    if (quote.getTicker() != null) {
+    if (quote != null) {
       dao.save(quote);
       return dao.findById(quote.getTicker());
     } else {
-      throw new IllegalArgumentException("Quote Service - No Quote Data found.");
+      logger.error("Quote Service - No Quote Data found.");
+      return Optional.empty();
     }
   }
 }

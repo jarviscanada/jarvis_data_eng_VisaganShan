@@ -10,21 +10,6 @@ import java.util.Properties;
 public class DatabaseConnectionManager {
   private final String url;
   private final Properties properties;
-  private static final String CONFIG_FILE = "config.properties";
-
-  public DatabaseConnectionManager() throws IOException {
-    this.properties = new Properties();
-    loadProperties(CONFIG_FILE);
-    String host = properties.getProperty("server");
-    String databaseName = properties.getProperty("database");
-    String username = properties.getProperty("username");
-    String password = properties.getProperty("password");
-
-
-    this.url = "jdbc:postgresql://"+host+"/"+databaseName;
-    this.properties.setProperty("user", username);
-    this.properties.setProperty("password", password);
-  }
 
   public DatabaseConnectionManager(String host, String databaseName,
       String username, String password){
@@ -37,13 +22,5 @@ public class DatabaseConnectionManager {
   public Connection getConnection() throws SQLException{
     return DriverManager.getConnection(this.url, this.properties);
   }
-
-  private void loadProperties(String filename) throws IOException {
-    // Loads file into Properties object
-    try(FileInputStream fs = new FileInputStream(filename)) {
-      properties.load(fs);
-    }
-  }
-
 }
 

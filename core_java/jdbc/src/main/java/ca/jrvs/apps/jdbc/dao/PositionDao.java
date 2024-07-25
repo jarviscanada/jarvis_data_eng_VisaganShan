@@ -41,13 +41,15 @@ public class PositionDao implements CrudDao<Position, String> {
   public Position save(Position entity) throws IllegalArgumentException {
     //Check if entity state valid
     if(entity.getTicker() == null){
-      throw new IllegalArgumentException("Invalid Symbol, Object can't be saved.");
+      logger.error("Invalid Symbol, Object can't be saved.");
+      return null;
     } else if(entity.getNumOfShares() < 1){
-      throw new IllegalArgumentException("Invalid number of shares, Object can't be saved.");
+      logger.error("Invalid number of shares, Object can't be saved.");
+      return null;
     } else if(entity.getValuePaid() < 0.01){
-      throw new IllegalArgumentException("Invalid price, Object can't be saved.");
+      logger.error("Invalid price, Object can't be saved.");
+      return null;
     }
-    logger.debug("If check: {}", findById(entity.getTicker()).isPresent());
     // if no existing object perform create else update
     if (!findById(entity.getTicker()).isPresent()) {
       //Create
