@@ -23,6 +23,7 @@ public class JsonParser {
   private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
   private static final Logger logger = LoggerFactory.getLogger(JsonParser.class);
 
+
   public static String toJson(Object object, boolean prettyJson, boolean includeNullValues)
       throws JsonProcessingException {
     ObjectMapper m = new ObjectMapper();

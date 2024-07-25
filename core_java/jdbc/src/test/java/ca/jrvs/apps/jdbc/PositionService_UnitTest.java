@@ -1,64 +1,66 @@
 package ca.jrvs.apps.jdbc;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.*;
 
-import ca.jrvs.apps.jdbc.dao.PositionDao;
-import ca.jrvs.apps.jdbc.dto.Position;
-import ca.jrvs.apps.jdbc.dto.Quote;
+import ca.jrvs.apps.jdbc.util.DatabaseConnectionManager;
+import java.sql.Connection;
 import ca.jrvs.apps.jdbc.util.PositionService;
-import ca.jrvs.apps.jdbc.util.QuoteService;
-
+import ca.jrvs.apps.jdbc.dto.Position;
+import ca.jrvs.apps.jdbc.dao.PositionDao;
+import java.sql.SQLException;
 import java.util.Optional;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 public class PositionService_UnitTest {
-  // Define mock objects
-  @Mock
-  private PositionDao dao;
+  public PositionService service;
+  public PositionDao dao;
+  public Position pos;
+  public static DatabaseConnectionManager dcm;
+  public static Connection c;
 
-  @Mock
-  private QuoteService quoteService;
 
-  // Create the QuoteService object and inject the mock classes into it
-  @InjectMocks
-  private PositionService service;
+  @BeforeAll
+  public static void setupDatabaseConnection(){
+    dcm = new DatabaseConnectionManager("localhost", "stock_quote", "postgres", "password");
+    try {
+      c = dcm.getConnection();
+    } catch (SQLException e) {
+      e.printStackTrace();
+      throw new RuntimeException("Unable to establish database connection.");
+    }
+  }
 
   @BeforeEach
-  public void setup(){
-    // Initialize mocks
-    MockitoAnnotations.openMocks(this);
+  public void init(){
+    dao = new PositionDao(c);
+    service = new PositionService();
+    pos = new Position();
+    pos.setTicker("AAPL");
+    pos.setNumOfShares(2);
+    pos.setValuePaid(0);
   }
 
   @Test
-  public void testBuy() {
-    String ticker = "AAPL";
-    int numOfShares = 2;
-    double price = 20.00;
+  public void testBuy(){
+    Position retObj = service.buy(pos.getTicker(), pos.getNumOfShares());
 
-    //Mock behaviour of external dependencies:
-//
-//    //Mock behaviour of quoteDao save and findById methods
-//    when(dao.save(mockQuote)).thenReturn(mockQuote);
-//    when(dao.findById(mockQuote.getTicker())).thenReturn(Optional.of(mockQuote));
-//
-//    //Test the method
-//    Optional<Quote> result = service.fetchQuoteDataFromAPI(ticker);
-//
-//    // Verify interactions
-//    verify(httpHelper).fetchQuoteInfo(ticker);
-////    verify(dao).save(mockQuote);
-////    verify(dao).findById(ticker);
-//
-//    // Assertion check to see if result object exists and if values are the same
-//    assertTrue(result.isPresent());
-//    assertEquals(ticker, result.get().getTicker());
+    assertEquals(pos.getTicker(), retObj.getTicker());
+    assertEquals(pos.getNumOfShares(), retObj.getNumOfShares());
+    assertNotEquals(pos.getValuePaid(), retObj.getValuePaid());
 
   }
+
+  @Test
+  public void testSell(){
+    // Ensure that there is a record in the database to sell
+    Position retObj = service.buy(pos.getTicker(), pos.getNumOfShares());
+    //Sell position
+    service.sell(pos.getTicker());
+    //Check if record remains in database
+    Optional<Position> doesPosExist = dao.findById(pos.getTicker());
+    assertFalse(doesPosExist.isPresent());
+  }
+
 }

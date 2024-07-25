@@ -11,29 +11,26 @@ import org.slf4j.LoggerFactory;
 public class PositionService {
 
   private static final Logger logger = LoggerFactory.getLogger(PositionService.class);
-  private PositionDao dao;
-
+  private PositionDao posDao;
 
   //Create constructor to establish a connection to the database
   public PositionService(){
-    DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost",
-        "stock_quote", "postgres", "password");
+    DatabaseConnectionManager dcm = new DatabaseConnectionManager();
     try {
       // Establish a connection to the database
       Connection connection = dcm.getConnection();
-      dao = new PositionDao(connection);
+      posDao = new PositionDao(connection);
     } catch(SQLException e){
       e.printStackTrace();
       throw new RuntimeException("Position Service unable to establish database connection.");
     }
   }
   public PositionService(PositionDao posDao){
-    DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost",
-        "stock_quote", "postgres", "password");
+    DatabaseConnectionManager dcm = new DatabaseConnectionManager();
     try {
       // Establish a connection to the database
       Connection connection = dcm.getConnection();
-      this.dao = posDao;
+      this.posDao = posDao;
     } catch(SQLException e){
       e.printStackTrace();
       throw new RuntimeException("Position Service unable to establish database connection.");
@@ -66,9 +63,9 @@ public class PositionService {
     }
 
     // Pass object to DAO save function which will create/update position in the database.
-    dao.save(pos);
-    if(dao.findById(pos.getTicker()).isPresent()){
-      return dao.findById(pos.getTicker()).get();
+    posDao.save(pos);
+    if(posDao.findById(pos.getTicker()).isPresent()){
+      return posDao.findById(pos.getTicker()).get();
     } else {
       return null;
     }
@@ -79,7 +76,7 @@ public class PositionService {
    * @param ticker
    */
   public void sell(String ticker) {
-    dao.deleteById(ticker);
+    posDao.deleteById(ticker);
   }
 
 }

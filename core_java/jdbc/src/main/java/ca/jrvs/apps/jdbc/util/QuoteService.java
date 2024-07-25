@@ -16,8 +16,7 @@ public class QuoteService {
 
   public QuoteService(){
     // Establish a connection to the database and initialize httpHelper
-    DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost",
-        "stock_quote", "postgres", "password");
+    DatabaseConnectionManager dcm = new DatabaseConnectionManager();
     httpHelper = new QuoteHttpHelper();
     try {
       Connection c = dcm.getConnection();
@@ -30,8 +29,7 @@ public class QuoteService {
 
   public QuoteService(QuoteDao quoteDao, QuoteHttpHelper httpHelper){
     // Establish a connection to the database and initialize httpHelper
-    DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost",
-        "stock_quote", "postgres", "password");
+    DatabaseConnectionManager dcm = new DatabaseConnectionManager();
     this.httpHelper = httpHelper;
     try {
       Connection c = dcm.getConnection();

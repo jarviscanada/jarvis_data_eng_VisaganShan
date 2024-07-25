@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import ca.jrvs.apps.jdbc.dao.QuoteDao;
 import ca.jrvs.apps.jdbc.dto.Quote;
 import ca.jrvs.apps.jdbc.util.DatabaseConnectionManager;
+import ca.jrvs.apps.jdbc.util.QuoteHttpHelper;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -20,18 +21,20 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class QuoteDao_Test {
+
   public static DatabaseConnectionManager dcm;
   public static Connection c;
 
-
   public QuoteDao dao;
+  QuoteHttpHelper httpHelper;
   Quote aaplQuote;
   Quote tslaQuote;
 
 
   @BeforeAll
   public static void setupDatabaseConnection() throws IOException {
-    dcm = new DatabaseConnectionManager("localhost", "stock_quote", "postgres", "password");
+      dcm = new DatabaseConnectionManager();
+
     try {
       c = dcm.getConnection();
     } catch (SQLException e) {
@@ -44,7 +47,6 @@ public class QuoteDao_Test {
   public void init(){
     SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
     dao = new QuoteDao(c);
-
     aaplQuote = new Quote();
     tslaQuote = new Quote();
 

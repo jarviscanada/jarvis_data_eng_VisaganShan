@@ -3,7 +3,12 @@ package ca.jrvs.apps.jdbc.util;
 import static ca.jrvs.apps.jdbc.util.JsonParser.toObjectFromJson;
 
 import ca.jrvs.apps.jdbc.dto.Quote;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -14,7 +19,19 @@ public class QuoteHttpHelper {
   private OkHttpClient client;
 
   public QuoteHttpHelper(){
-    this.apiKey ="NZ3IE12TDMP2ZGUP"; //remove this afterwards and set it up as an env variable
+    Map<String, String> properties = new HashMap<>();
+    try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/properties.txt"))) {
+      String line;
+      while ((line = br.readLine()) != null) {
+        String[] tokens = line.split(":");
+        properties.put(tokens[0], tokens[1]);
+      }
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    this.apiKey = properties.get("api-key");
     this.client = new OkHttpClient();
   }
   public QuoteHttpHelper(String apikey, OkHttpClient client){
@@ -42,7 +59,6 @@ public class QuoteHttpHelper {
       String jsonString = response.body().string();
 
       //Parse data from Json string to an object
-//      return toObjectFromJson(jsonString, Quote.class);
       return toObjectFromJson(jsonString);
 
     } catch (IllegalArgumentException e) {

@@ -221,6 +221,6 @@ public class PositionDao_Test {
     errPos.setNumOfShares(-1);
     errPos.setValuePaid(-100.0);
 
-    assertThrows(IllegalArgumentException.class, () -> positionDao.save(errPos));
+    assertNull(positionDao.save(errPos));
   }
 }

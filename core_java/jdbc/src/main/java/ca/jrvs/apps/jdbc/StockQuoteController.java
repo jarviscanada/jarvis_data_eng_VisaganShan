@@ -21,13 +21,10 @@ public class StockQuoteController {
   private QuoteHttpHelper httpHelper;
   private QuoteDao quoteDao;
   private PositionDao posDao;
-  private Connection c;
-
 
   public StockQuoteController(QuoteService qs, PositionService ps, Connection c) throws IOException {
     this.quoteService = qs;
     this.positionService = ps;
-    this.c = c;
     quoteDao = new QuoteDao(c);
     posDao = new PositionDao(c);
   }
@@ -39,7 +36,8 @@ public class StockQuoteController {
   Scanner scanner = new Scanner(System.in);
   // Set up while loop for interface options
     while(true){
-      System.out.println("Welcome to Stock Trader!");
+      System.out.println("Stock Trader");
+      System.out.println("------------");
       System.out.println("1. Search for a stock quote");
       System.out.println("2. Buy stock");
       System.out.println("3. Sell stock");
@@ -97,7 +95,7 @@ public class StockQuoteController {
         System.out.println("Latest Trading Day: " + quote.getLatestTradingDay());
         System.out.println("Previous close: " + quote.getPreviousClose());
         System.out.println("Change: " + quote.getChange());
-        System.out.println("Change Percent: " + quote.getChangePercent());
+        System.out.println("Change Percent: " + quote.getChangePercent() + "\n");
       } else {
         System.out.println("Cannot find stock quote details for \"" + symbol+"\". Please try again.\n");
       }
