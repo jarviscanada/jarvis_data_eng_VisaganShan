@@ -11,30 +11,25 @@ import org.slf4j.LoggerFactory;
 public class PositionService {
 
   private static final Logger logger = LoggerFactory.getLogger(PositionService.class);
-  private PositionDao posDao;
+  private final PositionDao posDao;
+  private final QuoteService qs;
 
   //Create constructor to establish a connection to the database
   public PositionService(){
     DatabaseConnectionManager dcm = new DatabaseConnectionManager();
+    this.qs = new QuoteService();
     try {
       // Establish a connection to the database
-      Connection connection = dcm.getConnection();
-      posDao = new PositionDao(connection);
+      Connection c = dcm.getConnection();
+      posDao = new PositionDao(c);
     } catch(SQLException e){
       e.printStackTrace();
       throw new RuntimeException("Position Service unable to establish database connection.");
     }
   }
-  public PositionService(PositionDao posDao){
-    DatabaseConnectionManager dcm = new DatabaseConnectionManager();
-    try {
-      // Establish a connection to the database
-      Connection connection = dcm.getConnection();
-      this.posDao = posDao;
-    } catch(SQLException e){
-      e.printStackTrace();
-      throw new RuntimeException("Position Service unable to establish database connection.");
-    }
+  public PositionService(PositionDao posDao, QuoteService quoteService){
+    this.qs = quoteService;
+    this.posDao = posDao;
   }
   /**
    * Processes a buy order and updates the database accordingly
@@ -48,8 +43,7 @@ public class PositionService {
     pos.setTicker(ticker);
     pos.setNumOfShares(numberOfShares);
 
-    // Create quote object to retrieve maximum volume of given ticker
-    QuoteService qs = new QuoteService();
+    // Retrieve maximum volume of given ticker using quote service
     Optional<Quote> optionalQuote = qs.fetchQuoteDataFromAPI(ticker);
 
     //Check if value is not null, retrieve Quote object from Optional
@@ -61,14 +55,9 @@ public class PositionService {
         logger.error("Number of Shares being purchased exceeds max volume");
       }
     }
-
-    // Pass object to DAO save function which will create/update position in the database.
     posDao.save(pos);
-    if(posDao.findById(pos.getTicker()).isPresent()){
-      return posDao.findById(pos.getTicker()).get();
-    } else {
-      return null;
-    }
+    // Pass object to DAO save function which will create/update position in the database.
+    return pos;
   }
 
   /**

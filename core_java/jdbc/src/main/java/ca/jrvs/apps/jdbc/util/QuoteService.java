@@ -31,13 +31,8 @@ public class QuoteService {
     // Establish a connection to the database and initialize httpHelper
     DatabaseConnectionManager dcm = new DatabaseConnectionManager();
     this.httpHelper = httpHelper;
-    try {
-      Connection c = dcm.getConnection();
-      dao = quoteDao;
-    } catch(SQLException e){
-      e.printStackTrace();
-      throw new RuntimeException("Quote Service unable to establish database connection.");
-    }
+    this.dao = quoteDao;
+
   }
   /**
    * Fetches latest quote data from endpoint

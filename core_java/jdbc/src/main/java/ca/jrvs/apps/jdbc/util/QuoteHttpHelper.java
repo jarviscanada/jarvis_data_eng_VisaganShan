@@ -12,11 +12,14 @@ import java.util.Map;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class QuoteHttpHelper {
 
   private String apiKey;
   private OkHttpClient client;
+  private static final Logger logger = LoggerFactory.getLogger(QuoteHttpHelper.class);
 
   public QuoteHttpHelper(){
     Map<String, String> properties = new HashMap<>();
@@ -33,7 +36,9 @@ public class QuoteHttpHelper {
     }
     this.apiKey = properties.get("api-key");
     this.client = new OkHttpClient();
+    logger.info("api-key: " + apiKey);
   }
+
   public QuoteHttpHelper(String apikey, OkHttpClient client){
     //Initialize state to use http methods.
     this.apiKey = apikey;
@@ -52,7 +57,7 @@ public class QuoteHttpHelper {
         .header("X-RapidAPI-Key", apiKey)
         .header("X-RapidAPI-Host", "alphavantage.co")
         .build();
-
+    logger.info(request.toString());
     try {
       //Execute request call
       Response response = client.newCall(request).execute();

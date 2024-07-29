@@ -143,7 +143,7 @@ public class StockQuoteController {
         // Sell position
         System.out.println("Selling " + position.getNumOfShares() + " shares of " + symbol + "@ $" + currPrice);
         positionService.sell(symbol);
-        System.out.println("Sold stock(s) for a return of " + profits + "dollars.");
+        System.out.println("Sold stock(s) for a profit($) of " + profits + " dollars.");
       } catch (Exception e){
         e.printStackTrace();
         throw new RuntimeException("Failed to sell stock");
