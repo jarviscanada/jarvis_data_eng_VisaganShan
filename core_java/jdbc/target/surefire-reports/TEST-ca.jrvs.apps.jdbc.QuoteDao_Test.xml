@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="6" name="ca.jrvs.apps.jdbc.QuoteDao_Test" time="0.052" errors="0" skipped="0">
+<testsuite tests="6" failures="6" name="ca.jrvs.apps.jdbc.QuoteDao_Test" time="0.035" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.24+8-LTS"/>
@@ -61,7 +61,25 @@
     <property name="java.vendor.version" value="(Red_Hat-11.0.24.0.8-2)"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testCreate" time="0">
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById" time="0.001">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById(QuoteDao_Test.java:220)
+</failure>
+  </testcase>
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling" time="0.032">
+    <failure message="Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling(QuoteDao_Test.java:231)
+Caused by: java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.lambda$testErrorHandling$0(QuoteDao_Test.java:231)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 21 more
+</failure>
+  </testcase>
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testCreate" time="0.002">
     <failure type="java.lang.NullPointerException">java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.QuoteDao_Test.testCreate(QuoteDao_Test.java:106)
 </failure>
@@ -79,24 +97,6 @@
   <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testFindById" time="0">
     <failure type="java.lang.NullPointerException">java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.QuoteDao_Test.testFindById(QuoteDao_Test.java:196)
-</failure>
-  </testcase>
-  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById" time="0">
-    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
-	at ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById(QuoteDao_Test.java:220)
-</failure>
-  </testcase>
-  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling" time="0.052">
-    <failure message="Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
-	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
-	at ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling(QuoteDao_Test.java:231)
-Caused by: java.lang.NullPointerException
-	at ca.jrvs.apps.jdbc.QuoteDao_Test.lambda$testErrorHandling$0(QuoteDao_Test.java:231)
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
-	... 21 more
 </failure>
   </testcase>
 </testsuite>

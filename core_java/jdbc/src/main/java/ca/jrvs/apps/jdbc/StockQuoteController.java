@@ -1,7 +1,6 @@
 package ca.jrvs.apps.jdbc;
 
 import ca.jrvs.apps.jdbc.dto.Quote;
-import ca.jrvs.apps.jdbc.util.DatabaseConnectionManager;
 import ca.jrvs.apps.jdbc.util.PositionService;
 import ca.jrvs.apps.jdbc.util.QuoteHttpHelper;
 import ca.jrvs.apps.jdbc.util.QuoteService;
@@ -10,8 +9,6 @@ import ca.jrvs.apps.jdbc.dao.QuoteDao;
 import ca.jrvs.apps.jdbc.dto.Position;
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StockQuoteController {
@@ -110,12 +107,28 @@ public class StockQuoteController {
   }
 
   private void buyStockQuote(Scanner scanner) {
+    int shares = 0;
+    boolean isValid = false;
+
     //Retrieve user input
     System.out.println("Please enter the stock symbol to purchase: ");
     String symbol = scanner.nextLine();
-    System.out.println("Please enter the number of shares you would like to purchase: ");
-    int shares = Integer.parseInt(scanner.nextLine());
+    do {
+      System.out.println("Please enter the number of shares you would like to purchase: ");
+      String shareString = scanner.nextLine();
 
+      try {
+        shares = Integer.parseInt(shareString);
+        if (shares > 0) {
+          isValid = true;
+        } else {
+          System.out.println("Please enter a positive integer.");
+        }
+      } catch (NumberFormatException e) {
+        System.out.println("Invalid input. Please enter a valid integer.");
+      }
+
+    }while(!isValid);
     //Buy stock
     try{
       positionService.buy(symbol, shares);

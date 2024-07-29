@@ -1,8 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: ca.jrvs.apps.jdbc.QuoteDao_Test
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.059 sec <<< FAILURE!
-ca.jrvs.apps.jdbc.QuoteDao_Test.testCreate()  Time elapsed: 0 sec  <<< FAILURE!
+Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec <<< FAILURE!
+ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById(QuoteDao_Test.java:220)
+
+ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling()  Time elapsed: 0.032 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling(QuoteDao_Test.java:231)
+Caused by: java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.lambda$testErrorHandling$0(QuoteDao_Test.java:231)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 21 more
+
+ca.jrvs.apps.jdbc.QuoteDao_Test.testCreate()  Time elapsed: 0.002 sec  <<< FAILURE!
 java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.QuoteDao_Test.testCreate(QuoteDao_Test.java:106)
 
@@ -17,20 +33,4 @@ java.lang.NullPointerException
 ca.jrvs.apps.jdbc.QuoteDao_Test.testFindById()  Time elapsed: 0 sec  <<< FAILURE!
 java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.QuoteDao_Test.testFindById(QuoteDao_Test.java:196)
-
-ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById()  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById(QuoteDao_Test.java:220)
-
-ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling()  Time elapsed: 0.052 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
-	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
-	at ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling(QuoteDao_Test.java:231)
-Caused by: java.lang.NullPointerException
-	at ca.jrvs.apps.jdbc.QuoteDao_Test.lambda$testErrorHandling$0(QuoteDao_Test.java:231)
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
-	... 21 more
 

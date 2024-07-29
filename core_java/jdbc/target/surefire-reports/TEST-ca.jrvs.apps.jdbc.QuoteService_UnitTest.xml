@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="2" name="ca.jrvs.apps.jdbc.QuoteService_UnitTest" time="0.375" errors="0" skipped="0">
+<testsuite tests="2" failures="2" name="ca.jrvs.apps.jdbc.QuoteService_UnitTest" time="0.425" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.24+8-LTS"/>
@@ -61,23 +61,23 @@
     <property name="java.vendor.version" value="(Red_Hat-11.0.24.0.8-2)"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="ca.jrvs.apps.jdbc.QuoteService_UnitTest" name="ca.jrvs.apps.jdbc.QuoteService_UnitTest.testFetchQuoteServiceFromApi" time="0.155">
-    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
-	at ca.jrvs.apps.jdbc.QuoteService_UnitTest.testFetchQuoteServiceFromApi(QuoteService_UnitTest.java:61)
-</failure>
-    <system-out>4118 [main] INFO  ca.jrvs.apps.jdbc.util.QuoteHttpHelper  - api-key: NZ3IE12TDMP2ZGUP
-4137 [main] INFO  ca.jrvs.apps.jdbc.util.QuoteHttpHelper  - Request{method=GET, url=https://www.alphavantage.co/query?function=GLOBAL_QUOTE&amp;symbol=AAPL&amp;apikey=NZ3IE12TDMP2ZGUP&amp;datatype=json, headers=[X-RapidAPI-Key:NZ3IE12TDMP2ZGUP, X-RapidAPI-Host:alphavantage.co]}
-4267 [main] ERROR ca.jrvs.apps.jdbc.util.JsonParser  - No data was given by API.
-4268 [main] ERROR ca.jrvs.apps.jdbc.util.QuoteService  - Quote Service - No Quote Data found.
-</system-out>
-  </testcase>
-  <testcase classname="ca.jrvs.apps.jdbc.QuoteService_UnitTest" name="ca.jrvs.apps.jdbc.QuoteService_UnitTest.testApiCall" time="0.22">
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteService_UnitTest" name="ca.jrvs.apps.jdbc.QuoteService_UnitTest.testApiCall" time="0.217">
     <failure type="java.lang.NullPointerException">java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.QuoteService_UnitTest.testApiCall(QuoteService_UnitTest.java:45)
 </failure>
-    <system-out>4328 [main] INFO  ca.jrvs.apps.jdbc.util.QuoteHttpHelper  - api-key: NZ3IE12TDMP2ZGUP
-4328 [main] INFO  ca.jrvs.apps.jdbc.util.QuoteHttpHelper  - Request{method=GET, url=https://www.alphavantage.co/query?function=GLOBAL_QUOTE&amp;symbol=AAPL&amp;apikey=NZ3IE12TDMP2ZGUP&amp;datatype=json, headers=[X-RapidAPI-Key:NZ3IE12TDMP2ZGUP, X-RapidAPI-Host:alphavantage.co]}
-4486 [main] ERROR ca.jrvs.apps.jdbc.util.JsonParser  - No data was given by API.
+    <system-out>4324 [main] INFO  ca.jrvs.apps.jdbc.util.QuoteHttpHelper  - api-key: NZ3IE12TDMP2ZGUP
+4333 [main] INFO  ca.jrvs.apps.jdbc.util.QuoteHttpHelper  - Request{method=GET, url=https://www.alphavantage.co/query?function=GLOBAL_QUOTE&amp;symbol=AAPL&amp;apikey=NZ3IE12TDMP2ZGUP&amp;datatype=json, headers=[X-RapidAPI-Key:NZ3IE12TDMP2ZGUP, X-RapidAPI-Host:alphavantage.co]}
+4527 [main] ERROR ca.jrvs.apps.jdbc.util.JsonParser  - No data was given by API.
+</system-out>
+  </testcase>
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteService_UnitTest" name="ca.jrvs.apps.jdbc.QuoteService_UnitTest.testFetchQuoteServiceFromApi" time="0.208">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteService_UnitTest.testFetchQuoteServiceFromApi(QuoteService_UnitTest.java:61)
+</failure>
+    <system-out>4536 [main] INFO  ca.jrvs.apps.jdbc.util.QuoteHttpHelper  - api-key: NZ3IE12TDMP2ZGUP
+4548 [main] INFO  ca.jrvs.apps.jdbc.util.QuoteHttpHelper  - Request{method=GET, url=https://www.alphavantage.co/query?function=GLOBAL_QUOTE&amp;symbol=AAPL&amp;apikey=NZ3IE12TDMP2ZGUP&amp;datatype=json, headers=[X-RapidAPI-Key:NZ3IE12TDMP2ZGUP, X-RapidAPI-Host:alphavantage.co]}
+4736 [main] ERROR ca.jrvs.apps.jdbc.util.JsonParser  - No data was given by API.
+4736 [main] ERROR ca.jrvs.apps.jdbc.util.QuoteService  - Quote Service - No Quote Data found.
 </system-out>
   </testcase>
 </testsuite>

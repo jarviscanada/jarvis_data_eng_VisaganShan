@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: ca.jrvs.apps.jdbc.QuoteService_IntTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.081 sec <<< FAILURE!
-ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi()  Time elapsed: 2.942 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi(QuoteService_IntTest.java:61)
-
-ca.jrvs.apps.jdbc.QuoteService_IntTest.testApiCall()  Time elapsed: 0.131 sec  <<< FAILURE!
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.586 sec <<< FAILURE!
+ca.jrvs.apps.jdbc.QuoteService_IntTest.testApiCall()  Time elapsed: 3.023 sec  <<< FAILURE!
 java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.QuoteService_IntTest.testApiCall(QuoteService_IntTest.java:45)
+
+ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi()  Time elapsed: 0.557 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi(QuoteService_IntTest.java:61)
 
