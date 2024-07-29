@@ -52,4 +52,9 @@ public class QuoteService {
       return Optional.empty();
     }
   }
+
+  public void removeStockQuote(String ticker){
+    //Clean up unecessary remaining stock quotes when a position is sold
+    dao.deleteById(ticker);
+  }
 }

@@ -4,7 +4,6 @@ package ca.jrvs.apps.jdbc;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -81,10 +80,11 @@ public class PositionService_UnitTest {
     String ticker = "AAPL";
 
     doNothing().when(posDao).deleteById(ticker);
-
+    doNothing().when(qs).removeStockQuote(ticker);
     service.sell(ticker);
 
     verify(posDao).deleteById(ticker);
+    verify(qs).removeStockQuote(ticker);
 
   }
 }

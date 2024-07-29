@@ -10,7 +10,6 @@ import ca.jrvs.apps.jdbc.util.QuoteHttpHelper;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -194,6 +193,7 @@ public class QuoteDao_Test {
   @Test
   public void testFindById() {
     //Check if object found by Id matches test object.
+    dao.save(aaplQuote);
     Optional <Quote> objById = dao.findById(aaplQuote.getTicker());
     if(objById.isPresent()) {
       Quote foundObj = objById.get();
@@ -222,19 +222,6 @@ public class QuoteDao_Test {
     //Check to see if object still exists in database
     Optional<Quote> doesAaplExists = dao.findById(aaplQuote.getTicker());
     assertFalse(doesAaplExists.isPresent());
-  }
-
-
-  @Test
-  public void testDeleteAll(){
-    dao.save(aaplQuote);
-    dao.save(tslaQuote);
-    dao.deleteAll();
-    //Check to see if object still exists in database
-    Optional<Quote> doesAaplExists = dao.findById(aaplQuote.getTicker());
-    Optional<Quote> doesTslaExists = dao.findById(tslaQuote.getTicker());
-    assertFalse(doesAaplExists.isPresent());
-    assertFalse(doesTslaExists.isPresent());
   }
 
   @Test

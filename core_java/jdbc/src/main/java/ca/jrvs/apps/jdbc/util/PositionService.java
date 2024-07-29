@@ -66,6 +66,7 @@ public class PositionService {
    */
   public void sell(String ticker) {
     posDao.deleteById(ticker);
+    qs.removeStockQuote(ticker);
   }
 
 }

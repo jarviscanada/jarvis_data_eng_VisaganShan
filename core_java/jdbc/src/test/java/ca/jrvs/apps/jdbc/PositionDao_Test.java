@@ -178,6 +178,7 @@ public class PositionDao_Test {
   @Test
   public void testFindById() {
     //Check if object found by Id matches test object.
+    positionDao.save(aaplPos);
     Optional <Position> objById = positionDao.findById(aaplPos.getTicker());
     if(objById.isPresent()) {
       Position foundObj = objById.get();

@@ -38,12 +38,12 @@ public class StockQuoteController {
     while(true){
       System.out.println("Stock Trader");
       System.out.println("------------");
-      System.out.println("1. Search for a stock quote");
+      System.out.println("1. Get a stock quote");
       System.out.println("2. Buy stock");
       System.out.println("3. Sell stock");
-      System.out.println("4. View position");
-      System.out.println("5. View all saved stock quotes");
-      System.out.println("6. View all positions");
+      System.out.println("4. View a position");
+      System.out.println("5. View stock details for all positions");
+      System.out.println("6. View all your positions");
       System.out.println("7. Exit");
       System.out.print("Please make a selection: ");
       String choice = scanner.nextLine();
@@ -96,6 +96,9 @@ public class StockQuoteController {
         System.out.println("Previous close: " + quote.getPreviousClose());
         System.out.println("Change: " + quote.getChange());
         System.out.println("Change Percent: " + quote.getChangePercent() + "\n");
+
+        // Delete this quote from database after outputting because we aren't buying this quote
+        quoteService.removeStockQuote(quote.getTicker());
       } else {
         System.out.println("Cannot find stock quote details for \"" + symbol+"\". Please try again.\n");
       }

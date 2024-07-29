@@ -1,7 +1,6 @@
 package ca.jrvs.apps.jdbc;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import ca.jrvs.apps.jdbc.util.DatabaseConnectionManager;
 import java.sql.Connection;
 import ca.jrvs.apps.jdbc.util.PositionService;
