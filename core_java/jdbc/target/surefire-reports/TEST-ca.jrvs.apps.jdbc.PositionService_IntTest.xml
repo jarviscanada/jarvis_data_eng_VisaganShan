@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="2" name="ca.jrvs.apps.jdbc.PositionService_IntTest" time="0.006" errors="0" skipped="0">
+<testsuite tests="2" failures="2" name="ca.jrvs.apps.jdbc.PositionService_IntTest" time="0.005" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.24+8-LTS"/>
@@ -61,12 +61,12 @@
     <property name="java.vendor.version" value="(Red_Hat-11.0.24.0.8-2)"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="ca.jrvs.apps.jdbc.PositionService_IntTest" name="ca.jrvs.apps.jdbc.PositionService_IntTest.testBuy" time="0.003">
+  <testcase classname="ca.jrvs.apps.jdbc.PositionService_IntTest" name="ca.jrvs.apps.jdbc.PositionService_IntTest.testBuy" time="0.004">
     <failure type="java.lang.NullPointerException">java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.PositionService_IntTest.testBuy(PositionService_IntTest.java:46)
 </failure>
   </testcase>
-  <testcase classname="ca.jrvs.apps.jdbc.PositionService_IntTest" name="ca.jrvs.apps.jdbc.PositionService_IntTest.testSell" time="0.003">
+  <testcase classname="ca.jrvs.apps.jdbc.PositionService_IntTest" name="ca.jrvs.apps.jdbc.PositionService_IntTest.testSell" time="0.001">
     <failure type="java.lang.NullPointerException">java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.PositionService_IntTest.testSell(PositionService_IntTest.java:57)
 </failure>

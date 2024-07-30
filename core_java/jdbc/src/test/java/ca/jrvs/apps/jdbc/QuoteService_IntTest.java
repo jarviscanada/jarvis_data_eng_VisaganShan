@@ -37,22 +37,23 @@ public class QuoteService_IntTest {
     dao = new QuoteDao(c);
   }
 
-  @Test
-  public void testApiCall(){
-    QuoteHttpHelper apiHelper = new QuoteHttpHelper();
-    Quote retObj = apiHelper.fetchQuoteInfo("AAPL");
-
-    assertEquals("AAPL", retObj.getTicker());
-    assertNotNull(retObj.getOpen());
-    assertNotNull(retObj.getLow());
-    assertNotNull(retObj.getPrice());
-    assertNotNull(retObj.getVolume());
-    assertNotNull(retObj.getLatestTradingDay());
-    assertNotNull(retObj.getPreviousClose());
-    assertNotNull(retObj.getChange());
-    assertNotNull(retObj.getChangePercent());
-    assertNull(retObj.getTimestamp());
-  }
+// Limit to free API calls, uncomment if testing required.
+//  @Test
+//  public void testApiCall(){
+//    QuoteHttpHelper apiHelper = new QuoteHttpHelper();
+//    Quote retObj = apiHelper.fetchQuoteInfo("AAPL");
+//
+//    assertEquals("AAPL", retObj.getTicker());
+//    assertNotNull(retObj.getOpen());
+//    assertNotNull(retObj.getLow());
+//    assertNotNull(retObj.getPrice());
+//    assertNotNull(retObj.getVolume());
+//    assertNotNull(retObj.getLatestTradingDay());
+//    assertNotNull(retObj.getPreviousClose());
+//    assertNotNull(retObj.getChange());
+//    assertNotNull(retObj.getChangePercent());
+//    assertNull(retObj.getTimestamp());
+//  }
 
   @Test
   public void testFetchQuoteServiceFromApi(){

@@ -25,7 +25,6 @@ public class QuoteDao_Test {
   public static Connection c;
 
   public QuoteDao dao;
-  QuoteHttpHelper httpHelper;
   Quote aaplQuote;
   Quote tslaQuote;
 

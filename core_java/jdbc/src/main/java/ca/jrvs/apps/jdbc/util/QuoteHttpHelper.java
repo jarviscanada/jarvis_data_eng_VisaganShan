@@ -36,7 +36,6 @@ public class QuoteHttpHelper {
     }
     this.apiKey = properties.get("api-key");
     this.client = new OkHttpClient();
-    logger.info("api-key: " + apiKey);
   }
 
   public QuoteHttpHelper(String apikey, OkHttpClient client){

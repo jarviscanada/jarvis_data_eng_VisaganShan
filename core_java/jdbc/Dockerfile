@@ -1,3 +1,12 @@
 FROM openjdk:11-slim
-COPY target/jdbc*.jar /usr/local/app/grep/lib/jdbc.jar
-ENTRYPOINT ["java","-jar","/usr/local/app/jdbc/lib/jdbc.jar"]
+
+# Set working directory inside container
+WORKDIR /usr/local/app
+
+# Copy JAR file into container
+COPY target/jdbc*.jar ./jdbc/lib/jdbc.jar
+
+# Copy properties file into container
+# COPY src/main/resources/properties.txt ./src/main/resources/properties.txt
+
+ENTRYPOINT ["java","-jar","jdbc/lib/jdbc.jar"]

@@ -1,81 +1,64 @@
 package ca.jrvs.apps.jdbc;
 
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import ca.jrvs.apps.jdbc.util.DatabaseConnectionManager;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import static org.mockito.Mockito.*;
+
 import ca.jrvs.apps.jdbc.util.QuoteService;
 import ca.jrvs.apps.jdbc.dto.Quote;
 import ca.jrvs.apps.jdbc.dao.QuoteDao;
 import ca.jrvs.apps.jdbc.util.QuoteHttpHelper;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Optional;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 public class QuoteService_UnitTest {
-  public QuoteService service;
-  public QuoteDao dao;
-  public static DatabaseConnectionManager dcm;
-  public static Connection c;
+  // Define mock objects
+  @Mock
+  private QuoteDao dao;
 
+  @Mock
+  private QuoteHttpHelper httpHelper;
 
-  @BeforeAll
-  public static void setupDatabaseConnection(){
-    dcm = new DatabaseConnectionManager("localhost", "stock_quote", "postgres", "password");
-    try {
-      c = dcm.getConnection();
-    } catch (SQLException e) {
-      e.printStackTrace();
-      throw new RuntimeException("Unable to establish database connection.");
-    }
-  }
+  @Mock
+  private Quote mockQuote;
+  // Create the QuoteService object and inject the mock classes into it
+  @InjectMocks
+  private QuoteService service;
 
   @BeforeEach
-  public void init(){
-    dao = new QuoteDao(c);
+  public void setup(){
+    // Initialize mocks
+    MockitoAnnotations.openMocks(this);
   }
 
   @Test
-  public void testApiCall(){
-    QuoteHttpHelper apiHelper = new QuoteHttpHelper();
-    Quote retObj = apiHelper.fetchQuoteInfo("AAPL");
+  public void testFetchQuoteServiceFromApi() {
+    String ticker = "AAPL";
+    mockQuote = new Quote();
+    mockQuote.setTicker(ticker);
 
-    assertEquals("AAPL", retObj.getTicker());
-    assertNotNull(retObj.getOpen());
-    assertNotNull(retObj.getLow());
-    assertNotNull(retObj.getPrice());
-    assertNotNull(retObj.getVolume());
-    assertNotNull(retObj.getLatestTradingDay());
-    assertNotNull(retObj.getPreviousClose());
-    assertNotNull(retObj.getChange());
-    assertNotNull(retObj.getChangePercent());
-    assertNull(retObj.getTimestamp());
+    //Mock behaviour of external dependencies:
+    //Mock behaviour of QuoteHttpHelper
+    when(httpHelper.fetchQuoteInfo(ticker)).thenReturn(mockQuote);
+
+    //Mock behaviour of quoteDao save and findById methods
+    when(dao.save(mockQuote)).thenReturn(mockQuote);
+    when(dao.findById(mockQuote.getTicker())).thenReturn(Optional.of(mockQuote));
+
+    //Test the method
+    Optional<Quote> result = service.fetchQuoteDataFromAPI(ticker);
+
+    // Verify interactions
+    verify(httpHelper).fetchQuoteInfo(ticker);
+    verify(dao).save(mockQuote);
+    verify(dao).findById(ticker);
+
+    // Assertion check to see if result object exists and if values are the same
+    assertTrue(result.isPresent());
+    assertEquals(ticker, result.get().getTicker());
   }
-
-  @Test
-  public void testFetchQuoteServiceFromApi(){
-    QuoteService service = new QuoteService();
-    Optional<Quote> serviceObj = service.fetchQuoteDataFromAPI("AAPL");
-    Quote expectedQuote = dao.findById("AAPL").get();
-    if (serviceObj.isPresent()){
-      Quote actualQuote = serviceObj.get();
-
-      assertEquals(expectedQuote.getTicker(), actualQuote.getTicker());
-      assertEquals(expectedQuote.getOpen(), actualQuote.getOpen());
-      assertEquals(expectedQuote.getHigh(), actualQuote.getHigh());
-      assertEquals(expectedQuote.getLow(), actualQuote.getLow());
-      assertEquals(expectedQuote.getPrice(), actualQuote.getPrice());
-      assertEquals(expectedQuote.getVolume(), actualQuote.getVolume());
-      assertEquals(expectedQuote.getLatestTradingDay(), actualQuote.getLatestTradingDay());
-      assertEquals(expectedQuote.getPreviousClose(), actualQuote.getPreviousClose());
-      assertEquals(expectedQuote.getChange(), actualQuote.getChange());
-      assertEquals(expectedQuote.getChangePercent(), actualQuote.getChangePercent());
-    } else {
-      throw new RuntimeException("testFetchQuoteServiceFromApi - Object"
-          + " returned from api call is not present.");
-    }
-  }
-
 }

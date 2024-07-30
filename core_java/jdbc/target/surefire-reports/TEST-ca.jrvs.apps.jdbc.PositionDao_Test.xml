@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="7" name="ca.jrvs.apps.jdbc.PositionDao_Test" time="0.007" errors="0" skipped="0">
+<testsuite tests="7" failures="7" name="ca.jrvs.apps.jdbc.PositionDao_Test" time="0.013" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.24+8-LTS"/>
@@ -61,22 +61,7 @@
     <property name="java.vendor.version" value="(Red_Hat-11.0.24.0.8-2)"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="ca.jrvs.apps.jdbc.PositionDao_Test" name="ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteById" time="0.001">
-    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
-	at ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteById(PositionDao_Test.java:197)
-</failure>
-  </testcase>
-  <testcase classname="ca.jrvs.apps.jdbc.PositionDao_Test" name="ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteAll" time="0.001">
-    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
-	at ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteAll(PositionDao_Test.java:209)
-</failure>
-  </testcase>
-  <testcase classname="ca.jrvs.apps.jdbc.PositionDao_Test" name="ca.jrvs.apps.jdbc.PositionDao_Test.testErrorHandling" time="0.001">
-    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
-	at ca.jrvs.apps.jdbc.PositionDao_Test.testErrorHandling(PositionDao_Test.java:225)
-</failure>
-  </testcase>
-  <testcase classname="ca.jrvs.apps.jdbc.PositionDao_Test" name="ca.jrvs.apps.jdbc.PositionDao_Test.testCreate" time="0.001">
+  <testcase classname="ca.jrvs.apps.jdbc.PositionDao_Test" name="ca.jrvs.apps.jdbc.PositionDao_Test.testCreate" time="0.002">
     <failure type="java.lang.NullPointerException">java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.PositionDao_Test.testCreate(PositionDao_Test.java:116)
 </failure>
@@ -91,9 +76,24 @@
 	at ca.jrvs.apps.jdbc.PositionDao_Test.testReadAll(PositionDao_Test.java:148)
 </failure>
   </testcase>
-  <testcase classname="ca.jrvs.apps.jdbc.PositionDao_Test" name="ca.jrvs.apps.jdbc.PositionDao_Test.testFindById" time="0.001">
+  <testcase classname="ca.jrvs.apps.jdbc.PositionDao_Test" name="ca.jrvs.apps.jdbc.PositionDao_Test.testFindById" time="0.004">
     <failure type="java.lang.NullPointerException">java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.PositionDao_Test.testFindById(PositionDao_Test.java:181)
+</failure>
+  </testcase>
+  <testcase classname="ca.jrvs.apps.jdbc.PositionDao_Test" name="ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteById" time="0.003">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteById(PositionDao_Test.java:197)
+</failure>
+  </testcase>
+  <testcase classname="ca.jrvs.apps.jdbc.PositionDao_Test" name="ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteAll" time="0.001">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteAll(PositionDao_Test.java:209)
+</failure>
+  </testcase>
+  <testcase classname="ca.jrvs.apps.jdbc.PositionDao_Test" name="ca.jrvs.apps.jdbc.PositionDao_Test.testErrorHandling" time="0.001">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.PositionDao_Test.testErrorHandling(PositionDao_Test.java:225)
 </failure>
   </testcase>
 </testsuite>

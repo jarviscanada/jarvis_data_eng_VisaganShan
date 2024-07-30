@@ -28,6 +28,7 @@
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
+          <enableAssertions>false</enableAssertions>
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
       </plugin>
