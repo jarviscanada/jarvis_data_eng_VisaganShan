@@ -94,8 +94,11 @@ public class StockQuoteController {
         System.out.println("Change: " + quote.getChange());
         System.out.println("Change Percent: " + quote.getChangePercent() + "\n");
 
-        // Delete this quote from database after outputting because we aren't buying this quote
-        quoteService.removeStockQuote(quote.getTicker());
+        // If position for this quote does not exist, delete it.
+        if(posDao.findById(quote.getTicker()).isEmpty()){
+          quoteService.removeStockQuote(quote.getTicker());
+        }
+
       } else {
         System.out.println("Cannot find stock quote details for \"" + symbol+"\". Please try again.\n");
       }

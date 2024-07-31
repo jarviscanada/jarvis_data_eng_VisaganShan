@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: ca.jrvs.apps.jdbc.PositionService_UnitTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.326 sec <<< FAILURE!
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.714 sec <<< FAILURE!
 ca.jrvs.apps.jdbc.PositionService_UnitTest.testBuy()  Time elapsed: 0 sec  <<< FAILURE!
 java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.PositionService_UnitTest.testBuy(PositionService_UnitTest.java:61)
 
-ca.jrvs.apps.jdbc.PositionService_UnitTest.testSell()  Time elapsed: 2.317 sec  <<< FAILURE!
+ca.jrvs.apps.jdbc.PositionService_UnitTest.testSell()  Time elapsed: 2.705 sec  <<< FAILURE!
 org.mockito.exceptions.misusing.NullInsteadOfMockException: 
 Argument passed to when() is null!
 Example of correct stubbing:

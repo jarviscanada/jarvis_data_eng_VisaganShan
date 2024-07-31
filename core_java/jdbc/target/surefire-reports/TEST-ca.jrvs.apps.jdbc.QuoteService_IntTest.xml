@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="ca.jrvs.apps.jdbc.QuoteService_IntTest" time="2.832" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="ca.jrvs.apps.jdbc.QuoteService_IntTest" time="1.945" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.24+8-LTS"/>
@@ -61,13 +61,49 @@
     <property name="java.vendor.version" value="(Red_Hat-11.0.24.0.8-2)"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="ca.jrvs.apps.jdbc.QuoteService_IntTest" name="ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi" time="2.832">
-    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
-	at ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi(QuoteService_IntTest.java:62)
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteService_IntTest" name="ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi" time="1.945">
+    <failure message="Quote Service unable to establish database connection." type="java.lang.RuntimeException">java.lang.RuntimeException: Quote Service unable to establish database connection.
+	at ca.jrvs.apps.jdbc.util.QuoteService.&lt;init&gt;(QuoteService.java:26)
+	at ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi(QuoteService_IntTest.java:60)
 </failure>
-    <system-out>0    [main] INFO  ca.jrvs.apps.jdbc.util.QuoteHttpHelper  - Request{method=GET, url=https://www.alphavantage.co/query?function=GLOBAL_QUOTE&amp;symbol=AAPL&amp;apikey=NZ3IE12TDMP2ZGUP&amp;datatype=json, headers=[X-RapidAPI-Key:NZ3IE12TDMP2ZGUP, X-RapidAPI-Host:alphavantage.co]}
-949  [main] ERROR ca.jrvs.apps.jdbc.util.JsonParser  - No data was given by API.
-949  [main] ERROR ca.jrvs.apps.jdbc.util.QuoteService  - Quote Service - No Quote Data found.
-</system-out>
+    <system-err>org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at ca.jrvs.apps.jdbc.util.DatabaseConnectionManager.getConnection(DatabaseConnectionManager.java:48)
+	at ca.jrvs.apps.jdbc.util.QuoteService.&lt;init&gt;(QuoteService.java:22)
+	at ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi(QuoteService_IntTest.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.junit.PojoTestSet.executeTestMethod(PojoTestSet.java:151)
+	at org.apache.maven.surefire.junit.PojoTestSet.executeTestMethods(PojoTestSet.java:102)
+	at org.apache.maven.surefire.junit.PojoTestSet.execute(PojoTestSet.java:83)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:121)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.net.UnknownHostException: jrvs-psql
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:229)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+	... 27 more
+</system-err>
   </testcase>
 </testsuite>

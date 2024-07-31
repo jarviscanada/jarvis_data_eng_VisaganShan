@@ -1,8 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: ca.jrvs.apps.jdbc.QuoteService_IntTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.844 sec <<< FAILURE!
-ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi()  Time elapsed: 2.832 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi(QuoteService_IntTest.java:62)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.967 sec <<< FAILURE!
+ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi()  Time elapsed: 1.945 sec  <<< FAILURE!
+java.lang.RuntimeException: Quote Service unable to establish database connection.
+	at ca.jrvs.apps.jdbc.util.QuoteService.<init>(QuoteService.java:26)
+	at ca.jrvs.apps.jdbc.QuoteService_IntTest.testFetchQuoteServiceFromApi(QuoteService_IntTest.java:60)
 

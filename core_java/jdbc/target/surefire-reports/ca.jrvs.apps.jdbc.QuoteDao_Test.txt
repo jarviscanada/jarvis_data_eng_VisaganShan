@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: ca.jrvs.apps.jdbc.QuoteDao_Test
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec <<< FAILURE!
-ca.jrvs.apps.jdbc.QuoteDao_Test.testCreate()  Time elapsed: 0.003 sec  <<< FAILURE!
+Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec <<< FAILURE!
+ca.jrvs.apps.jdbc.QuoteDao_Test.testCreate()  Time elapsed: 0.015 sec  <<< FAILURE!
 java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.QuoteDao_Test.testCreate(QuoteDao_Test.java:105)
 
-ca.jrvs.apps.jdbc.QuoteDao_Test.testUpdate()  Time elapsed: 0.012 sec  <<< FAILURE!
+ca.jrvs.apps.jdbc.QuoteDao_Test.testUpdate()  Time elapsed: 0.002 sec  <<< FAILURE!
 java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.QuoteDao_Test.testUpdate(QuoteDao_Test.java:137)
 
@@ -22,7 +22,7 @@ ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById()  Time elapsed: 0.001 sec  <<< F
 java.lang.NullPointerException
 	at ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById(QuoteDao_Test.java:219)
 
-ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling()  Time elapsed: 0.028 sec  <<< FAILURE!
+ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling()  Time elapsed: 0.079 sec  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
