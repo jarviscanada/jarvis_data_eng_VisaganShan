@@ -1,21 +1,21 @@
 # Visa Shan . Jarvis Consulting
 
-I am a data engineer and I enjoy solving complex problems. My journey into the software industry began in high school when I decided to take a coding course and discovered that I love to be challenged mentally and apply my skills instead of learning through methods that focus on just retaining and regurgitating knowledge from books and documents. From there I pursued my passion and my education, graduating from Seneca College in 2023 in Computer Programming and a Software Development Bootcamp at Brainstation. In my spare time, I work as a freelance programming tutor, helping college and university students with their assignments.
+Hi I am a data engineer skilled in languages such as Java, Python, and SQL, etc. I enjoy building robust data pipelines and working on scalable solutions. My journey in software development includes graduating from Seneca College in 2023 with a diploma in Computer Programming and completing a Software Development Bootcamp at Brainstation. In my spare time, I work as a freelance programming tutor, helping college and university students with their assignments and enhancing their coding skills.
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, Python, HTML & CSS, Javascript, Front-end Frameworks (React), Back-end Frameworks (Express.js, Node.js)
+**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, Python, HTML & CSS, Javascript, React, Express.js, Node.js
 
-**Competent:** Cloud Platforms (AWS, GCP), Typescript, C++, Docker, Bash/Shell
+**Competent:** Cloud Platforms(AWS & GCP), Django, Flask, C++, Docker
 
-**Familiar:** C, Lua, Visual Basic, PHP, Powershell
+**Familiar:** C, Lua, Visual Basic, PHP, Django, Typescript
 
 ## Jarvis Projects
 
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng__VisaganShan/](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan/)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/main/linux_sql)]: Implemented a monitoring agent that can track the hardware specifications and resource usage of machines in a Linux cluster and store the data inside a database. This monitoring agent is programming using technologies such as Bash, Docker, PostgreSQL, and Git and is tested using virtual machine instances running Rocky Linux 9 on the Google Cloud Platform(GCP).
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/main/linux_sql)]: Implemented a monitoring agent that can track the hardware specifications and resource usage of machines in a Linux cluster and store the data inside a database. This monitoring agent is programmed using technologies such as Bash, Docker, PostgreSQL, and Git and is tested using virtual machine instances running Rocky Linux 9 on the Google Cloud Platform(GCP).
 
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/core_java)]:
       
