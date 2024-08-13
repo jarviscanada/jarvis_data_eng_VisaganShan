@@ -26,7 +26,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng__VisaganSh
 ## Highlighted Projects
 **Gym Junkie - Website** [[GitHub](https://github.com/VisaganS/gym_junkie_backend)]: Conceptualized, strategized, and implemented a comprehensive full-stack application that allows users to find, manage, and create workouts that cater to users needs. Gym Junkie was made using the following tech stack: React and SASS for the front end website design and features, Node/Express for the backend API for interactions with the database, JWT for authentication of users, and Knex to query a MySQL database hosted on AWS.
 
-**Portfolio - Website** [[GitHub](https://www.visa-shan.com)]: Designed and implemented a front-end application that showcases my skills and projects as a software devleoper. This application was made using React for function, SASS for styling, and animated using libraries such as AOS, react-parallax, slick carousel, etc.
+**Portfolio - Website** [[Website](https://www.visa-shan.com)]: Designed and implemented a front-end application that showcases my skills and projects as a software devleoper. This application was made using React for function, SASS for styling, and animated using libraries such as AOS, react-parallax, slick carousel, etc.
 
 
 ## Professional Experiences
