@@ -95,8 +95,8 @@ education:
       - "GPA: 3.7/4.0"
   - school_name: "Brainstation"
     duration: "2023"
-    degree: "Software Development Diploma"
-    department: "N/A"
+    degree: "Certificate in Software Engineering"
+    department: "Software Engineering Program"
     awards_achievements:
       - "Graduated with distinction, achieving a cumulative grade of 92 percent." 
 
