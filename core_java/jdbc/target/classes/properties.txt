@@ -1,0 +1,7 @@
+db-class:org.postgresql.Driver
+server:jrvs-psql
+database:stock_quote
+port:5432
+username:postgres
+password:password
+api-key:QS7MBH9M16DAHJZL

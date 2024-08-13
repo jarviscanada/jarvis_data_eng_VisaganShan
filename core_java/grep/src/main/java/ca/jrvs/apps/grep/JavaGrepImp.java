@@ -5,11 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.apache.log4j.BasicConfigurator;
 
 import java.io.*;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class JavaGrepImp implements JavaGrep {
 
@@ -24,7 +21,6 @@ public class JavaGrepImp implements JavaGrep {
             throw new IllegalArgumentException("USAGE: JavaGrep regex rootPath outFile");
         }
 
-        //use default logger config NOT WORKING *****
         BasicConfigurator.configure();
 
         JavaGrepImp javaGrepImp = new JavaGrepImp();
