@@ -1,56 +1,45 @@
 # Visa Shan . Jarvis Consulting
 
-I am a data engineer and I enjoy solving complex problems. My journey into the software industry began in high school when I decided to take a coding course and discovered that I love to be challenged mentally and apply my skills instead of learning through methods that focus on just retaining and regurgitating knowledge from books and documents. From there I pursued my passion and my education, graduating from Seneca College in 2023 in Computer Programming and a Software Development Bootcamp at Brainstation. In my spare time, I work as a freelance programming tutor, helping college and university students with their assignments.
+I am a software developer who enjoys solving dynamic problems. Prior to working at Jarvis, I graduated from Seneca College in 2023 with a diploma in Computer Programming, and then I did a 4 month intensive bootcamp with BrainStation for software development. During this period of time I’ve built several applications using a variety of different languages and frameworks including HTML, CSS, Javascript, Python, and SQL code such as mySQL and oracleSQL, and various frameworks such as Flask for Python and React, Express.js, for Javascript. Currently I’ve been working on a variety of projects and honing my skills in Java and Linux technologies such as Bash. In my spare time, I work as a freelance programming tutor, helping college and university students with their assignments and enhancing their coding skills.
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, Python, HTML & CSS, Javascript, Front-end Frameworks (React), Back-end Frameworks (Express.js, Node.js)
+**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, Python, HTML & CSS, Javascript, React, Express.js
 
-**Competent:** Cloud Platforms (AWS, GCP), Typescript, C++, Docker, Bash/Shell
+**Competent:** Cloud Platforms (AWS, GCP), Django, Flask, C++, Lua
 
-**Familiar:** C, Lua, Visual Basic, PHP, Powershell
+**Familiar:** C, Typescript, Visual Basic, PHP, Powershell
 
 ## Jarvis Projects
 
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng__VisaganShan/](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan/)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/main/linux_sql)]: Implemented a monitoring agent that can track the hardware specifications and resource usage of machines in a Linux cluster and store the data inside a database. This monitoring agent is programming using technologies such as Bash, Docker, PostgreSQL, and Git and is tested using virtual machine instances running Rocky Linux 9 on the Google Cloud Platform(GCP).
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/main/linux_sql)]: Implemented a monitoring agent that can track the hardware specifications and resource usage of machines in a Linux cluster and store the data inside a database. The application retrieved hardware specifications and resource usage by running bash scripts that used regex to retrieve relevant values and stored them in a postgreSQL database which was instaniated using Docker. Operations would be set to repeat on an interval that was set using crontab and the application was using virtual machine instances.
 
-**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/core_java)]:
+**Java Projects** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/core_java)]:
       
-  - Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-  - JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
+  - JDBC App: Established a stock market simulator that allows users to view, purchase, and sell stocks. Implemented using Java and operates by first retrieving a stock quote using the OkHttp library to retrieve values from the AlphaVantage Stock API, converting the retrieved JSON data into a Java object using Jackson library, and storing the object in a dockerized postgreSQL database which interacts with Data Access Layer (DAO objects) that was implemented to handle interactions between the application and the database. Service layer was implemented for business logic (stock quote lookup, buying & selling of a position) and interacts with the controller which provides a user interface allowing the user to interact with the application and perform service layer operations.
   - Grep App: a command-line utility that searches for a text pattern recursively in a given directory, and outputs matched lines to a file. Implemented using Core Java and its features such as Lambda, Stream and Regex and imported IO classes. Deployed using a fat JAR file, turned into a Docker Image and containizered the application.
-
-**Springboot App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/springboot)]: Not Started
-
-**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/python_data_anlytics)]: Not Started
-
-**Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/hadoop)]: Not Started
-
-**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/spark)]: Not Started
-
-**Cloud/DevOps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/cloud_devops)]: Not Started
 
 
 ## Highlighted Projects
-**Gym Junkie - Website** [[GitHub](https://github.com/VisaganS/gym_junkie_backend)]: Conceptualized, strategized, and implemented a comprehensive full-stack application that allows users to find, manage, and create workouts that cater to users needs. Gym Junkie was made using the following tech stack: React and SASS for the front end and Node/Express backend API with JWT for auth, and Knex to query a MySQL database.
+**Gym Junkie - Website** [[GitHub](https://github.com/VisaganS/gym_junkie_backend)]: Conceptualized, strategized, and implemented a comprehensive full-stack application that allows users to find, manage, and create workouts that cater to users needs. Gym Junkie was made using the following tech stack: React and SASS for the front end website design and features, Node/Express for the backend API for interactions with the database, JWT for authentication of users, and Knex to query a MySQL database hosted on AWS.
 
-**Machine Learning**: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**Portfolio - Website** [[Website](https://www.visa-shan.com)]: Designed and implemented a front-end application that showcases my skills and projects as a software devleoper. This application was made using React for function, SASS for styling, and animated using libraries such as AOS, react-parallax, slick carousel, etc.
 
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2024-present)**: Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.
+**Software Developer, Jarvis (2024-present)**: Worked on various data projects involving Linux, Bash, Docker, Postgres, Java, and Spring Boot. Followed the scrum agile methodology implementing Git and Git Flow methodology with every project. Assisted others in project-related issues, and held daily scrum meetings as a scrum leader.
 
 **Tutor, SuperProf (2023-present)**: Provided one-on-one tutoring sessions to students to help them grasp complex programming concepts, troubleshoot programming errors and debug code. Languages and frameworks worked with include: HTML, CSS, Javascript, React, Python, Django, Flask, C++, and C.
 
-**Sales & Communications, Wireless Wave / Glentel Inc. (2022-2023)**: Utilized excellent communication and teamwork skills to foster collaborative environments and achieve successful outcomes. Demonstrated a strong work ethic, consistently meeting project milestones and delivering results within designated timeframes.
+**Sales & Communications, Wireless Wave / Glentel Inc. (2022-2023)**: Utilized excellent communication and teamwork skills to foster collaborative environments and achieve successful sales outcomes in the telecommunications industry. Demonstrated a strong work ethic, consistently exceeding monthly milestones and delivering results within designated timeframes.
 
 
 ## Education
-**Seneca Polytechnic College (2019 - 2023)**, Diploma in Computer Programming, N/A
+**Seneca Polytechnic College (2019 - 2023)**, Diploma in Computer Programming, Faculty of Applied Science & Engineering Technology
 - Graduated with honours (2023)
 - GPA: 3.7/4.0
 
@@ -64,6 +53,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng__VisaganSh
 - Developing Back-End Apps with Node.js Express (IBM, 2024)
 - Developing AI Applications with Python and Flask (IBM, 2024)
 - Python for Data Science, AI, and Development (IBM, 2024)
+
+
+## Activities/Hobbies
 - Fitness / Weight Lifting
 - Car Repair and Modifications
-- Self-Improvement
+- Self-Improvement Practices (Learning new skills, improving current skills, etc)
