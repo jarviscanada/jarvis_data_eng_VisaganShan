@@ -58,4 +58,4 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng__VisaganSh
 ## Activities/Hobbies
 - Fitness / Weight Lifting
 - Car Repair and Modifications
-- Self-Improvement Practices (Learning new skills, improving new skills, etc)
+- Self-Improvement Practices (Learning new skills, improving current skills, etc)
