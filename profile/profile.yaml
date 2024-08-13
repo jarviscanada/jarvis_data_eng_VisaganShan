@@ -95,7 +95,7 @@ education:
   - school_name: "Brainstation"
     duration: "2023"
     degree: "Software Development Diploma"
-    department: ""
+    department: "N/A"
     awards_achievements:
       - "Graduated with distinction, achieving a cumulative grade of 92 percent." 
 
