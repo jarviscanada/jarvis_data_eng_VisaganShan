@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng__VisaganSh
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: I am a software developer who enjoys solving dynamic problems. Prior to working at Jarvis, I graduated from Seneca College in 2023 with a diploma in Computer Programming, and then I did a 4 month intensive bootcamp with BrainStation for software development. During this period of time I’ve built several applications using a variety of different languages and frameworks including HTML, CSS, Javascript, Python, and SQL code such as mySQL and oracleSQL, and various frameworks such as Flask for Python and React, Express.js, for Javascript. Currently I’ve been working on a variety of projects and honing my skills in Java and Linux technologies such as Bash. In my spare time, I work as a freelance programming tutor, helping college and university students with their assignments and enhancing their coding skills.
+summary: I am a software developer who enjoys solving dynamic problems. Prior to working at Jarvis, I graduated from Seneca College in 2023 with a diploma in Computer Programming, and then I did a 4 month intensive bootcamp with BrainStation for software development. During this period of time I’ve built several applications using a variety of technologies such as React, Sass, Express.js, Flask, Django, and SQL. Currently at Jarvis, I’ve been working on an assortment of projects, the majority of which use Java and Linux technologies such as Bash, Docker, and Virtualization. In my spare time, I work as a freelance programming tutor, helping college and university students with their assignments and enhancing their coding skills.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -49,7 +49,7 @@ jarvis_projects:
     git_url: "/core_java"
     description:
       - "JDBC App: Established a stock market simulator that allows users to view, purchase, and sell stocks. Implemented using Java and operates by first retrieving a stock quote using the OkHttp library to retrieve values from the AlphaVantage Stock API, converting the retrieved JSON data into a Java object using Jackson library, and storing the object in a dockerized postgreSQL database which interacts with Data Access Layer (DAO objects) that was implemented to handle interactions between the application and the database. Service layer was implemented for business logic (stock quote lookup, buying & selling of a position) and interacts with the controller which provides a user interface allowing the user to interact with the application and perform service layer operations."
-      - "Grep App: a command-line utility that searches for a text pattern recursively in a given directory, and outputs matched lines to a file. Implemented using Core Java and its features such as Lambda, Stream and Regex and imported IO classes. Deployed using a fat JAR file, turned into a Docker Image and containizered the application."
+      - "Grep App: a command-line utility that searches for a text pattern recursively in a given directory, and outputs matched lines to a file. Implemented using Java and features such as Regex to retrieve pattern-matched text and Stream for efficient File reading and writing proccesses. Deployed using a fat JAR file and converted into a Docker Image for dockerized instance use."
 
 # List of personal or academic projects
 # Feel free to add more projects
@@ -95,8 +95,8 @@ education:
       - "GPA: 3.7/4.0"
   - school_name: "Brainstation"
     duration: "2023"
-    degree: "Software Development Diploma"
-    department: "N/A"
+    degree: "Certificate in Software Engineering"
+    department: "Software Engineering Program"
     awards_achievements:
       - "Graduated with distinction, achieving a cumulative grade of 92 percent." 
 
