@@ -53,8 +53,6 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng__VisaganSh
 - Developing Back-End Apps with Node.js Express (IBM, 2024)
 - Developing AI Applications with Python and Flask (IBM, 2024)
 - Python for Data Science, AI, and Development (IBM, 2024)
-
-## Hobbies / Interests
 - Fitness / Weight Lifting
 - Car Repair and Modifications
 - Self-Improvement Practices (Learning new skills, improving new skills, etc)
