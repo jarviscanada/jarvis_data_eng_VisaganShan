@@ -50,7 +50,12 @@ jarvis_projects:
     description:
       - "JDBC App: Established a stock market simulator that allows users to view, purchase, and sell stocks. Implemented using Java and operates by first retrieving a stock quote using the OkHttp library to retrieve values from the AlphaVantage Stock API, converting the retrieved JSON data into a Java object using Jackson library, and storing the object in a dockerized postgreSQL database which interacts with Data Access Layer (DAO objects) that was implemented to handle interactions between the application and the database. Service layer was implemented for business logic (stock quote lookup, buying & selling of a position) and interacts with the controller which provides a user interface allowing the user to interact with the application and perform service layer operations."
       - "Grep App: a command-line utility that searches for a text pattern recursively in a given directory, and outputs matched lines to a file. Implemented using Java and features such as Regex to retrieve pattern-matched text and Stream for efficient File reading and writing proccesses. Deployed using a fat JAR file and converted into a Docker Image for dockerized instance use."
-
+  - name: "Python Data Analytics"
+    git_url: "/python_data_analytics"
+    description: "Analyzed a company's transaction data and generated reports about their monthly revenue, and their new and existing users. Created an RFM (Recency, Frequency, Monetary) report about their customer base to determine which customers they should expedite more of their energy towards. All analyses were conducted using a Jupyter notebook, and Python was used along with libraries such as Pandas, Matplotlib, NumPy, and SQLAlchemy. Docker was used to run the Postgres container, which is the company's data warehouse."
+  - name: "Spark/ Scala"
+    git_url: "/spark"
+    description: "Set up clusters on Google Cloud Platform and Azure Databricks to manage and analyze large retail datasets. Leveraged Spark on both Zeppelin (GCP) and Databricks (Azure) to perform distributed data processing, enabling efficient large-scale analysis. Used Spark transformations and aggregations, such as calculating item totals, grouping by invoices, and filtering data based on custom criteria to identify patterns in sales data and calculate key metrics (growth rates, averages, etc)."
 # List of personal or academic projects
 # Feel free to add more projects
 highlighted_projects:
