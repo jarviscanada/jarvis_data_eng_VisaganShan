@@ -46,6 +46,16 @@
       ],
       "git_url": "/core_java",
       "name": "Java Projects"
+    },
+    {
+      "description": "Analyzed a company's transaction data and generated reports about their monthly revenue, and their new and existing users. Created an RFM (Recency, Frequency, Monetary) report about their customer base to determine which customers they should expedite more of their energy towards. All analyses were conducted using a Jupyter notebook, and Python was used along with libraries such as Pandas, Matplotlib, NumPy, and SQLAlchemy. Docker was used to run the Postgres container, which is the company's data warehouse.",
+      "git_url": "/python_data_analytics",
+      "name": "Python Data Analytics"
+    },
+    {
+      "description": "Set up clusters on Google Cloud Platform and Azure Databricks to manage and analyze large retail datasets. Leveraged Spark on both Zeppelin (GCP) and Databricks (Azure) to perform distributed data processing, enabling efficient large-scale analysis. Used Spark transformations and aggregations, such as calculating item totals, grouping by invoices, and filtering data based on custom criteria to identify patterns in sales data and calculate key metrics (growth rates, averages, etc).",
+      "git_url": "/spark",
+      "name": "Spark/ Scala"
     }
   ],
   "name": "Visa Shan",
