@@ -4,9 +4,9 @@ I am a software developer who enjoys solving dynamic problems. Prior to working 
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, Python, HTML & CSS, Javascript, React, Express.js
+**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, Python (AI Development, Data Science), HTML & CSS, Javascript, React, Express.js
 
-**Competent:** Cloud Platforms (AWS, GCP), Django, Flask, C++, Lua
+**Competent:** Cloud Platforms (AWS, GCP), Django, Flask (AI Applications), C++, Lua
 
 **Familiar:** C, Typescript, Visual Basic, PHP, Powershell
 
