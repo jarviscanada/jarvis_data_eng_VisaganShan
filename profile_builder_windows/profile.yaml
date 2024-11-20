@@ -24,7 +24,8 @@ skills:
     - Express.js
   # At least 5 skills
   competent:
-    - Cloud Platforms (AWS, GCP)
+    - Cloud Platforms (AWS RDS, GCP Dataproc, Azure Databricks)
+    - Scala
     - Django
     - Flask (AI Applications)
     - C++
