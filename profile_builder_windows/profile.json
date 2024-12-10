@@ -108,6 +108,8 @@
     "competent": [
       "Cloud Platforms (AWS RDS, GCP Dataproc, Azure Databricks)",
       "Scala",
+      "Spark",
+      "Spark \u0026 PySpark",
       "Django",
       "Flask (AI Applications)",
       "C++",
