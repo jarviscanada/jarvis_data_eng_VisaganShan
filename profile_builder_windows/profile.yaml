@@ -26,6 +26,8 @@ skills:
   competent:
     - Cloud Platforms (AWS RDS, GCP Dataproc, Azure Databricks)
     - Scala
+    - Spark
+    - Spark & PySpark
     - Django
     - Flask (AI Applications)
     - C++
