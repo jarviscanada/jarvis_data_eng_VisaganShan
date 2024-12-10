@@ -6,9 +6,9 @@ I am a software developer who enjoys solving dynamic problems. Prior to working 
 
 **Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, Python (AI Development, Data Science), HTML & CSS, Javascript, React, Express.js
 
-**Competent:** Cloud Platforms (AWS RDS, GCP Dataproc, Azure Databricks), Scala, Django, Flask (AI Applications), C++, Lua
+**Competent:** Cloud Platforms (AWS RDS, GCP Dataproc, Azure Databricks), Scala, Spark/ PySpark, Django, Flask (AI Applications), C++, Lua
 
-**Familiar:** C, Typescript, Visual Basic, PHP, Powershell
+**Familiar:** C, Kafka, Typescript, Visual Basic, PHP, Powershell
 
 ## Jarvis Projects
 
@@ -25,6 +25,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng__VisaganSh
 **Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/python_data_analytics)]: Analyzed a company's transaction data and generated reports about their monthly revenue, and their new and existing users. Created an RFM (Recency, Frequency, Monetary) report about their customer base to determine which customers they should expedite more of their energy towards. All analyses were conducted using a Jupyter notebook, and Python was used along with libraries such as Pandas, Matplotlib, NumPy, and SQLAlchemy. Docker was used to run the Postgres container, which is the company's data warehouse.
 
 **Spark/ Scala** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/spark)]: Set up clusters on Google Cloud Platform and Azure Databricks to manage and analyze large retail datasets. Leveraged Spark on both Zeppelin (GCP) and Databricks (Azure) to perform distributed data processing, enabling efficient large-scale analysis. Used Spark transformations and aggregations, such as calculating item totals, grouping by invoices, and filtering data based on custom criteria to identify patterns in sales data and calculate key metrics (growth rates, averages, etc).
+
+**Kafka Application** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/masterN/A)]: Developed a simple data pipeline using Confluent Kafka and PySpark. The application processes streaming JSON data from a Kafka topic, performs transformations on the data, and enables real-time querying using PySpark’s in-memory table functionality.
 
 
 ## Highlighted Projects
