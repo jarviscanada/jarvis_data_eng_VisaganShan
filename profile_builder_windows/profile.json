@@ -56,6 +56,11 @@
       "description": "Set up clusters on Google Cloud Platform and Azure Databricks to manage and analyze large retail datasets. Leveraged Spark on both Zeppelin (GCP) and Databricks (Azure) to perform distributed data processing, enabling efficient large-scale analysis. Used Spark transformations and aggregations, such as calculating item totals, grouping by invoices, and filtering data based on custom criteria to identify patterns in sales data and calculate key metrics (growth rates, averages, etc).",
       "git_url": "/spark",
       "name": "Spark/ Scala"
+    },
+    {
+      "description": "Developed a simple data pipeline using Confluent Kafka and PySpark. The application processes streaming JSON data from a Kafka topic, performs transformations on the data, and enables real-time querying using PySpark’s in-memory table functionality.",
+      "git_url": "N/A",
+      "name": "Kafka Application"
     }
   ],
   "name": "Visa Shan",
@@ -110,6 +115,7 @@
     ],
     "familiar": [
       "C",
+      "Kafka",
       "Typescript",
       "Visual Basic",
       "PHP",
