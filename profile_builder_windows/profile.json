@@ -20,7 +20,7 @@
       "school_name": "Brainstation"
     }
   ],
-  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng__VisaganShan/",
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_VisaganShan",
   "highlighted_projects": [
     {
       "description": "Conceptualized, strategized, and implemented a comprehensive full-stack application that allows users to find, manage, and create workouts that cater to users needs. Gym Junkie was made using the following tech stack: React and SASS for the front end website design and features, Node/Express for the backend API for interactions with the database, JWT for authentication of users, and Knex to query a MySQL database hosted on AWS.",
@@ -67,6 +67,7 @@
   "others": [
     {
       "bullets": [
+        "Databricks Certified Associate Developer for Apache 3.0 (Databricks, 2025)",
         "Intro to Cloud Computing (2024)",
         "Developing Front-End Apps With React (IBM, 2024)",
         "Developing Back-End Apps with Node.js Express (IBM, 2024)",
@@ -106,11 +107,9 @@
   ],
   "skills": {
     "competent": [
-      "Cloud Platforms (AWS RDS, GCP Dataproc, Azure Databricks)",
-      "Scala",
-      "Spark/ PySpark",
+      "Angular",
       "Django",
-      "Flask (AI Applications)",
+      "Flask",
       "C++",
       "Lua"
     ],
@@ -120,19 +119,23 @@
       "Typescript",
       "Visual Basic",
       "PHP",
-      "Powershell"
+      "Powershell",
+      "Hadoop"
     ],
     "proficient": [
+      "Python",
+      "Pyspark/ Spark",
+      "Scala",
+      "Cloud Platforms (Azure Databricks, GCP Dataproc Clusters, AWS RDS)",
       "Java",
-      "Linux/Bash",
-      "RDBMS/SQL",
-      "Agile/Scrum",
-      "Git",
-      "Python (AI Development, Data Science)",
+      "SQL",
+      "React",
       "HTML \u0026 CSS",
       "Javascript",
-      "React",
-      "Express.js"
+      "Express.js",
+      "Linux/Bash",
+      "Git",
+      "Agile/Scrum"
     ]
   },
   "summary": "I am a software developer who enjoys solving dynamic problems. Prior to working at Jarvis, I graduated from Seneca College in 2023 with a diploma in Computer Programming, and then I did a 4 month intensive bootcamp with BrainStation for software development. During this period of time I’ve built several applications using a variety of technologies such as React, Sass, Express.js, Flask, Django, and SQL. Currently at Jarvis, I’ve been working on an assortment of projects, the majority of which use Java and Linux technologies such as Bash, Docker, and Virtualization. In my spare time, I work as a freelance programming tutor, helping college and university students with their assignments and enhancing their coding skills."

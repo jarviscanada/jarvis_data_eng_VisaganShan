@@ -4,29 +4,29 @@ I am a software developer who enjoys solving dynamic problems. Prior to working 
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, Python (AI Development, Data Science), HTML & CSS, Javascript, React, Express.js
+**Proficient:** Python, Pyspark/ Spark, Scala, Cloud Platforms (Azure Databricks, GCP Dataproc Clusters, AWS RDS), Java, SQL, React, HTML & CSS, Javascript, Express.js, Linux/Bash, Git, Agile/Scrum
 
-**Competent:** Cloud Platforms (AWS RDS, GCP Dataproc, Azure Databricks), Scala, Spark/ PySpark, Django, Flask (AI Applications), C++, Lua
+**Competent:** Angular, Django, Flask, C++, Lua
 
-**Familiar:** C, Kafka, Typescript, Visual Basic, PHP, Powershell
+**Familiar:** C, Kafka, Typescript, Visual Basic, PHP, Powershell, Hadoop
 
 ## Jarvis Projects
 
-Project source code: [https://github.com/jarviscanada/jarvis_data_eng__VisaganShan/](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan/)
+Project source code: [https://github.com/jarviscanada/jarvis_data_eng_VisaganShan](https://github.com/jarviscanada/jarvis_data_eng_VisaganShan)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/main/linux_sql)]: Implemented a monitoring agent that can track the hardware specifications and resource usage of machines in a Linux cluster and store the data inside a database. The application retrieved hardware specifications and resource usage by running bash scripts that used regex to retrieve relevant values and stored them in a postgreSQL database which was instaniated using Docker. Operations would be set to repeat on an interval that was set using crontab and the application was using virtual machine instances.
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/main/linux_sql)]: Implemented a monitoring agent that can track the hardware specifications and resource usage of machines in a Linux cluster and store the data inside a database. The application retrieved hardware specifications and resource usage by running bash scripts that used regex to retrieve relevant values and stored them in a postgreSQL database which was instaniated using Docker. Operations would be set to repeat on an interval that was set using crontab and the application was using virtual machine instances.
 
-**Java Projects** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/core_java)]:
+**Java Projects** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/master/core_java)]:
       
   - JDBC App: Established a stock market simulator that allows users to view, purchase, and sell stocks. Implemented using Java and operates by first retrieving a stock quote using the OkHttp library to retrieve values from the AlphaVantage Stock API, converting the retrieved JSON data into a Java object using Jackson library, and storing the object in a dockerized postgreSQL database which interacts with Data Access Layer (DAO objects) that was implemented to handle interactions between the application and the database. Service layer was implemented for business logic (stock quote lookup, buying & selling of a position) and interacts with the controller which provides a user interface allowing the user to interact with the application and perform service layer operations.
   - Grep App: a command-line utility that searches for a text pattern recursively in a given directory, and outputs matched lines to a file. Implemented using Java and features such as Regex to retrieve pattern-matched text and Stream for efficient File reading and writing proccesses. Deployed using a fat JAR file and converted into a Docker Image for dockerized instance use.
 
-**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/python_data_analytics)]: Analyzed a company's transaction data and generated reports about their monthly revenue, and their new and existing users. Created an RFM (Recency, Frequency, Monetary) report about their customer base to determine which customers they should expedite more of their energy towards. All analyses were conducted using a Jupyter notebook, and Python was used along with libraries such as Pandas, Matplotlib, NumPy, and SQLAlchemy. Docker was used to run the Postgres container, which is the company's data warehouse.
+**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/master/python_data_analytics)]: Analyzed a company's transaction data and generated reports about their monthly revenue, and their new and existing users. Created an RFM (Recency, Frequency, Monetary) report about their customer base to determine which customers they should expedite more of their energy towards. All analyses were conducted using a Jupyter notebook, and Python was used along with libraries such as Pandas, Matplotlib, NumPy, and SQLAlchemy. Docker was used to run the Postgres container, which is the company's data warehouse.
 
-**Spark/ Scala** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/master/spark)]: Set up clusters on Google Cloud Platform and Azure Databricks to manage and analyze large retail datasets. Leveraged Spark on both Zeppelin (GCP) and Databricks (Azure) to perform distributed data processing, enabling efficient large-scale analysis. Used Spark transformations and aggregations, such as calculating item totals, grouping by invoices, and filtering data based on custom criteria to identify patterns in sales data and calculate key metrics (growth rates, averages, etc).
+**Spark/ Scala** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/master/spark)]: Set up clusters on Google Cloud Platform and Azure Databricks to manage and analyze large retail datasets. Leveraged Spark on both Zeppelin (GCP) and Databricks (Azure) to perform distributed data processing, enabling efficient large-scale analysis. Used Spark transformations and aggregations, such as calculating item totals, grouping by invoices, and filtering data based on custom criteria to identify patterns in sales data and calculate key metrics (growth rates, averages, etc).
 
-**Kafka Application** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng__VisaganShan//tree/masterN/A)]: Developed a simple data pipeline using Confluent Kafka and PySpark. The application processes streaming JSON data from a Kafka topic, performs transformations on the data, and enables real-time querying using PySpark’s in-memory table functionality.
+**Kafka Application** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_VisaganShan/tree/masterN/A)]: Developed a simple data pipeline using Confluent Kafka and PySpark. The application processes streaming JSON data from a Kafka topic, performs transformations on the data, and enables real-time querying using PySpark’s in-memory table functionality.
 
 
 ## Highlighted Projects
@@ -54,6 +54,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng__VisaganSh
 
 
 ## Miscellaneous
+- Databricks Certified Associate Developer for Apache 3.0 (Databricks, 2025)
 - Intro to Cloud Computing (2024)
 - Developing Front-End Apps With React (IBM, 2024)
 - Developing Back-End Apps with Node.js Express (IBM, 2024)
