@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: ca.jrvs.apps.jdbc.PositionDao_Test
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec <<< FAILURE!
+ca.jrvs.apps.jdbc.PositionDao_Test.testCreate()  Time elapsed: 0.004 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.PositionDao_Test.testCreate(PositionDao_Test.java:116)
+
+ca.jrvs.apps.jdbc.PositionDao_Test.testUpdate()  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.PositionDao_Test.testUpdate(PositionDao_Test.java:133)
+
+ca.jrvs.apps.jdbc.PositionDao_Test.testReadAll()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.PositionDao_Test.testReadAll(PositionDao_Test.java:148)
+
+ca.jrvs.apps.jdbc.PositionDao_Test.testFindById()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.PositionDao_Test.testFindById(PositionDao_Test.java:181)
+
+ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteById()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteById(PositionDao_Test.java:197)
+
+ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteAll()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.PositionDao_Test.testDeleteAll(PositionDao_Test.java:209)
+
+ca.jrvs.apps.jdbc.PositionDao_Test.testErrorHandling()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.PositionDao_Test.testErrorHandling(PositionDao_Test.java:225)
+
