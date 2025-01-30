@@ -1,0 +1,9 @@
+secretGenerator:
+- name: trading-app
+  literals:
+  - password=password
+  - user=postgres
+
+resources:
+  - psql-deployment.yaml
+  - trading-deployment.yaml
