@@ -4,6 +4,6 @@ database:stock_quote
 port:5432
 username:postgres
 password:password
-api-key:  
+api-key:
 
-# api-key from Vantage's Stock API
+# api-key is from Alpha Vantage's Stock API
