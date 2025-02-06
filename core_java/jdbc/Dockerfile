@@ -7,6 +7,9 @@ WORKDIR /usr/local/app
 COPY target/jdbc*.jar ./jdbc/lib/jdbc.jar
 
 # Copy properties file into container
-# COPY src/main/resources/properties.txt ./src/main/resources/properties.txt
+ COPY src/main/resources/properties.txt ./src/main/resources/properties.txt
+
+# Default CONFIG_PATH (can be overridden)
+ENV CONFIG_PATH=/app/config/properties.txt
 
 ENTRYPOINT ["java","-jar","jdbc/lib/jdbc.jar"]
