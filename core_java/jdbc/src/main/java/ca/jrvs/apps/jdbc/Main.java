@@ -21,6 +21,8 @@ public class Main {
     Map<String, String> properties = new HashMap<>();
 
     String filePath = System.getenv("CONFIG_PATH");
+    System.out.println("CONFIG_PATH:" + filePath);
+
     if (filePath == null || filePath.isEmpty()) {
       filePath = "src/main/resources/properties.txt";
     }

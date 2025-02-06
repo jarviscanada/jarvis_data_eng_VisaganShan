@@ -36,9 +36,14 @@ spec:
       containers:
       - image: visaganshan/jdbc:latest
         name: trading
+        command: ["/bin/sh", "-c", "java -jar ./jdbc/lib/jdbc.jar"]
+        stdin: true
+        tty: true
         env:
+        - name: CONFIG_PATH
+          value: "/app/config/properties.txt"
         - name: PSQL_HOST
-          value: trading-psql
+          value: jrvs-psql
         - name: PSQL_PORT
           value: "5432"
         - name: "PSQL_DB"
@@ -56,3 +61,11 @@ spec:
         ports:
         - containerPort: 5000
           name: trading
+        volumeMounts:
+          - name: secret-volume
+            mountPath: "/app/config"
+            readOnly: true
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: jdbc-secret
