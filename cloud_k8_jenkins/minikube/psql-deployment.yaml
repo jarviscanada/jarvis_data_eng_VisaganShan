@@ -48,6 +48,8 @@ spec:
       - image: visaganshan/jdbc-psql:latest
         name: jdbc-psql
         env:
+        - name: PGDATA
+          value: "/var/lib/postgresql/data/pgdata"
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
@@ -65,7 +67,7 @@ spec:
           name: psql
         volumeMounts:
         - name: psql-persistent-storage
-          mountPath: /var/lib/postgresql/data
+          mountPath: /var/lib/postgresql/data/db
       volumes:
       - name: psql-persistent-storage
         persistentVolumeClaim:
