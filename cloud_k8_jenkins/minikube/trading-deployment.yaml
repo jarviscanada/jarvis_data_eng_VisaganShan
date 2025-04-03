@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: trading
+  labels:
+    app: trading
+spec:
+  ports:
+    - port: 80
+      targetPort: 5000
+  selector:
+    app: trading
+    tier: app-server
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trading
+  labels:
+    app: trading
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: trading
+      tier: app-server
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: trading
+        tier: app-server
+    spec:
+      containers:
+      - image: visaganshan/jdbc:latest
+        name: trading
+        command: ["/bin/sh", "-c", "java -jar ./jdbc/lib/jdbc.jar"]
+        stdin: true
+        tty: true
+        env:
+        - name: CONFIG_PATH
+          value: "/app/config/properties.txt"
+        - name: PSQL_HOST
+          value: jrvs-psql
+        - name: PSQL_PORT
+          value: "5432"
+        - name: "PSQL_DB"
+          value: "jrvstrading"
+        - name: PSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: trading-app
+              key: user
+        - name: PSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: trading-app
+              key: password
+        ports:
+        - containerPort: 5000
+          name: trading
+        volumeMounts:
+          - name: secret-volume
+            mountPath: "/app/config"
+            readOnly: true
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: jdbc-secret
