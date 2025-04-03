@@ -28,6 +28,16 @@
       "name": "Gym Junkie - Website"
     },
     {
+      "description": "Developed a real-time weather reporting system that ingests, processes, and visualizes live weather data using Azure's modern data stack. This project simulates an end-to-end data pipeline, handling streaming data, real-time analytics, and automated alerting. The system fetches weather data from an external Weather API, processes it using Azure Databricks and Azure Functions, streams it through Azure Event Hub, and stores it in Kusto DB. Real-time insights are powered by Microsoft Fabric, with an interactive Power BI dashboard for visualization and Data Activator for extreme weather alerts.",
+      "git_url": "N/A",
+      "name": "Real-Time Weather Reporting System"
+    },
+    {
+      "description": "Designed and implemented a fully integrated data pipeline using Azure Data Factory, Azure Data Lake, Databricks, Synapse Analytics, and Power BI. This end-to-end solution automates data ingestion, transformation, and reporting by extracting data from an on-prem SQL Server database, processing it using Spark & Scala in Databricks, and storing the transformed data in Azure Synapse for optimized querying. Power BI dashboards provide real-time insights, enabling businesses to make faster data-driven decisions.",
+      "git_url": "N/A",
+      "name": "Azure End-to-End Data Pipeline"
+    },
+    {
       "description": "Designed and implemented a front-end application that showcases my skills and projects as a software devleoper. This application was made using React for function, SASS for styling, and animated using libraries such as AOS, react-parallax, slick carousel, etc.",
       "git_url": "https://www.visa-shan.com",
       "name": "Portfolio - Website"
