@@ -1,0 +1,38 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.nav{
+    background-image: $navy;
+    height: 100vh;
+    width: 100%;
+    font-size: 12px;
+    display:flex;
+    flex-direction: column;
+    padding: 1rem 0;
+
+    &__home{
+        padding:1rem 0.5rem;
+        width:100%;
+        text-align: center;
+    }
+    &__profile{
+        font-size:2rem;
+        color: white;
+        @include tablet{
+            font-size: 2.5rem;
+        }
+    }
+    &__container{
+        margin: 0.5rem;
+        padding: 1rem 0;
+        border-radius: 0.25rem;
+        text-align: center;
+        &:hover{
+            background-color: black;
+        }
+    }
+    &__icon{
+        color: $orange;
+        font-size: 1.5rem;
+    }
+}

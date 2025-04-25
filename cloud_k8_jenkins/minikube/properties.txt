@@ -1,0 +1,9 @@
+db-class:org.postgresql.Driver
+server:jrvs-psql
+database:stock_quote
+port:5432
+username:postgres
+password:password
+api-key:
+
+# api-key is from Alpha Vantage's Stock API

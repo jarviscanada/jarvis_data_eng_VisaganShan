@@ -1,0 +1,46 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.add-trader{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    &__top{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        padding-bottom: 1rem;
+        justify-content: space-between;
+    }
+    &__exit{
+        font-size: 1rem;
+    }
+    &__content{
+        padding: 1rem 0;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+    &__buttons{
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid gray;
+        padding-top: 1rem;
+    }
+    &__button{
+        margin: 0 0.5rem;
+        padding: 0.5rem;
+        width: 5rem;
+        &--submit{
+            background-color: rgba(10, 64, 201, 0.927);
+            color: white;
+        }
+        border: 1px solid gray;
+        &:hover{
+            background-color: $orange;
+            color: white;
+        }
+    }
+}

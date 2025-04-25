@@ -1,0 +1,6 @@
+ca/jrvs/apps/jdbc/QuoteService_UnitTest.class
+ca/jrvs/apps/jdbc/QuoteService_IntTest.class
+ca/jrvs/apps/jdbc/QuoteDao_Test.class
+ca/jrvs/apps/jdbc/PositionService_IntTest.class
+ca/jrvs/apps/jdbc/PositionService_UnitTest.class
+ca/jrvs/apps/jdbc/PositionDao_Test.class

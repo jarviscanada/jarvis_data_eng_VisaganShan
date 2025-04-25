@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="6" failures="6" name="ca.jrvs.apps.jdbc.QuoteDao_Test" time="0.099" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="11.0.24+8-LTS"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-11.0.24.0.8-2.el9.x86_64/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/rocky/dev/jarvis_data_eng_visagan/core_java/jdbc"/>
+    <property name="java.vm.vendor" value="Red Hat, Inc."/>
+    <property name="java.vendor.url" value="https://www.redhat.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/rocky/dev/jarvis_data_eng_visagan/core_java/jdbc"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="11.0.24+8-LTS"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/opt/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/opt/maven/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="5.14.0-427.24.1.el9_4.cloud.3.0.x86_64"/>
+    <property name="library.jansi.path" value="/opt/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/rocky"/>
+    <property name="user.timezone" value="UTC"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="rocky"/>
+    <property name="java.class.path" value="/opt/maven/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-11.0.24.0.8-2.el9.x86_64"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="11.0.24"/>
+    <property name="java.vendor" value="Red Hat, Inc."/>
+    <property name="java.specification.maintenance.version" value="2"/>
+    <property name="maven.home" value="/opt/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.vendor.url.bug" value="https://access.redhat.com/support/cases/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="(Red_Hat-11.0.24.0.8-2)"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testCreate" time="0.015">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.testCreate(QuoteDao_Test.java:105)
+</failure>
+  </testcase>
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testUpdate" time="0.002">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.testUpdate(QuoteDao_Test.java:137)
+</failure>
+  </testcase>
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testReadAll" time="0.001">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.testReadAll(QuoteDao_Test.java:152)
+</failure>
+  </testcase>
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testFindById" time="0.001">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.testFindById(QuoteDao_Test.java:195)
+</failure>
+  </testcase>
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById" time="0.001">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.testDeleteById(QuoteDao_Test.java:219)
+</failure>
+  </testcase>
+  <testcase classname="ca.jrvs.apps.jdbc.QuoteDao_Test" name="ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling" time="0.079">
+    <failure message="Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.testErrorHandling(QuoteDao_Test.java:230)
+Caused by: java.lang.NullPointerException
+	at ca.jrvs.apps.jdbc.QuoteDao_Test.lambda$testErrorHandling$0(QuoteDao_Test.java:230)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 21 more
+</failure>
+  </testcase>
+</testsuite>
